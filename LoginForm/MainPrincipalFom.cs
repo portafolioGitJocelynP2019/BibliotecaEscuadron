@@ -29,12 +29,12 @@ namespace LoginForm
             
             if (txtUsername.Text.Trim() == "")
             {
-                MessageBox.Show("Segurese de ingresar el usuario");
+                MessageBox.Show("Asegurese de ingresar el usuario");
                 txtUsername.Focus();
             }
             else if (txtPassword.Text.Trim() == "")
             {
-                MessageBox.Show("Segurese de ingresar la contraseña");
+                MessageBox.Show("asegurese de ingresar la contraseña");
                 txtPassword.Focus();
             }
             else
@@ -44,10 +44,15 @@ namespace LoginForm
                 if (canLogin) { 
                     MessageBox.Show("Bienvenido Sr(a): "+ txtUsername.Text);
                     this.Hide();
-                }else
+                    MainPrincipal form = new MainPrincipal();
+                    form.Show();
+                }
+                else
                 {
-                    MessageBox.Show("Ocurrio un error");
-                    this.Hide();
+                    MessageBox.Show("Error de user o Password, intente nuevamente");
+                    txtUsername.Clear();
+                    txtPassword.Clear();
+                    txtUsername.Focus();
                 }
             }
         }
