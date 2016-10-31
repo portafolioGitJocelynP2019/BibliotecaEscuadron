@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BibliotecaEscuadron
+
+namespace LoginForm
 {
     public partial class MainPrincipal : Form
     {
@@ -16,12 +17,7 @@ namespace BibliotecaEscuadron
         {
             InitializeComponent();
         }
-        /*
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }*/
-
+        
         private void MainPrincipal_Load(object sender, EventArgs e)
         {
             lblFecha.Text = DateTime.UtcNow.ToLongDateString();
@@ -31,7 +27,8 @@ namespace BibliotecaEscuadron
         {
            if (MessageBox.Show(" Desea cerrar esta vista ahora.", "Close Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             { Close(); }
-            
+            loginForm frm = new loginForm();
+            frm.Show();
         }
 
     
