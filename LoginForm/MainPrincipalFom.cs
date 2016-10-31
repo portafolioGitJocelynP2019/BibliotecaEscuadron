@@ -29,27 +29,28 @@ namespace LoginForm
             
             if (txtUsername.Text.Trim() == "")
             {
-                MessageBox.Show("Asegurese de ingresar el usuario");
+                MessageBox.Show("Asegurese de ingresar el usuario.", "Close Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);              
                 txtUsername.Focus();
             }
             else if (txtPassword.Text.Trim() == "")
             {
-                MessageBox.Show("asegurese de ingresar la contraseña");
+                MessageBox.Show("asegurese de ingresar la contraseña.", "Close Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtPassword.Focus();
             }
             else
             {
                 ConsumeWebApi consume = new ConsumeWebApi();
                 Boolean canLogin = consume.canLogin(txtUsername.Text, txtPassword.Text);
-                if (canLogin) { 
-                    MessageBox.Show("Bienvenido Sr(a): "+ txtUsername.Text);
+                if (canLogin) {
+                    
+                    MessageBox.Show("Bienvenido Sr(a): "+ txtUsername.Text, "Escuela Vuelo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     MainPrincipal form = new MainPrincipal();
                     form.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Error de user o Password, intente nuevamente");
+                    MessageBox.Show("Error de user o Password, intente nuevamente.", "Close Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtUsername.Clear();
                     txtPassword.Clear();
                     txtUsername.Focus();
@@ -61,6 +62,18 @@ namespace LoginForm
         {
             //Actualiza cada segundo la hora.
             lblHora.Text= DateTime.Now.ToLongTimeString();
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox2.Size = new Size(90,80);
+        }
+
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(" ESTA SEGURO QUE DESEA SALIR.", "Close Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            { Application.Exit(); }
         }
     }
 }

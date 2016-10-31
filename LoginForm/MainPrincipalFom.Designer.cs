@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblExit = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.rdbRecordar = new System.Windows.Forms.RadioButton();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -45,8 +47,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::LoginForm.Properties.Resources.login3;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.lblExit);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.rdbRecordar);
             this.panel1.Controls.Add(this.txtPassword);
@@ -56,6 +59,31 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(495, 169);
             this.panel1.TabIndex = 0;
+            // 
+            // lblExit
+            // 
+            this.lblExit.AutoSize = true;
+            this.lblExit.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblExit.Location = new System.Drawing.Point(419, 132);
+            this.lblExit.Name = "lblExit";
+            this.lblExit.Size = new System.Drawing.Size(64, 26);
+            this.lblExit.TabIndex = 6;
+            this.lblExit.Text = "EXIT";
+            this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::LoginForm.Properties.Resources.entrar;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.ErrorImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(410, 20);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(87, 73);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
             // 
             // rdbRecordar
             // 
@@ -125,18 +153,6 @@
             this.lblHora.TabIndex = 3;
             this.lblHora.Text = "label2";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::LoginForm.Properties.Resources.entrar;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.ErrorImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(410, 22);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(87, 73);
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -178,6 +194,7 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblExit;
     }
 }
 

@@ -63,6 +63,26 @@ namespace LoginForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap archivo {
+            get {
+                object obj = ResourceManager.GetObject("archivo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archivo1 {
+            get {
+                object obj = ResourceManager.GetObject("archivo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap avion41 {
             get {
                 object obj = ResourceManager.GetObject("avion41", resourceCulture);
@@ -166,6 +186,16 @@ namespace LoginForm.Properties {
         internal static System.Drawing.Bitmap MenuPilotoo {
             get {
                 object obj = ResourceManager.GetObject("MenuPilotoo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap salir {
+            get {
+                object obj = ResourceManager.GetObject("salir", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
