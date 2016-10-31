@@ -103,6 +103,16 @@ namespace BibliotecaEscuadron.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MenuAdm {
+            get {
+                object obj = ResourceManager.GetObject("MenuAdm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MenuOperador {
             get {
                 object obj = ResourceManager.GetObject("MenuOperador", resourceCulture);
