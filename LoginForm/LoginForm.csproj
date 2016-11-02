@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarVuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarVuelo.Designer.cs">
+      <DependentUpon>AgregarVuelo.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AgregarVuelo.resx">
+      <DependentUpon>AgregarVuelo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainPrincipal.resx">
       <DependentUpon>MainPrincipal.cs</DependentUpon>
     </EmbeddedResource>
