@@ -18,8 +18,20 @@ namespace BibliotecaEscuadron
             var response = client.Execute<RespuestaLogin>(request);
             return response.Data.Cantidad > 0;
         }
-
-
+        public Boolean nuevoVuelo(int nro_vuelo, String condicion, int total_tv, String origen, String destino, String fecha, int id_mision)
+        {
+            var client = new RestClient("https://database-clportafoliotrial.db.us2.oraclecloudapps.com");
+            var request = new RestRequest("/apex/hawkflight/vuelos/", Method.POST);
+            request.AddParameter("nro_vuelo", nro_vuelo);
+            request.AddParameter("condicion", condicion);
+            request.AddParameter("total_tv", total_tv);
+            request.AddParameter("origen", origen);
+            request.AddParameter("destino", destino);
+            request.AddParameter("fecha", fecha);
+            request.AddParameter("id_mision", id_mision);
+            var response = client.Execute<Vuelo>(request);
+            return true;
+        }
         public Boolean createUser(AdministradorUsuario registroUsuario)
         {
 
@@ -30,11 +42,11 @@ namespace BibliotecaEscuadron
             if (response.ErrorException != null)
             {
                 Console.WriteLine("error :", response.ErrorException.Message);
-           
+
                 return false;
             }
-            return response.Data.ID!=null;
-           
+            return response.Data.ID != null;
+
         }
     }
 }

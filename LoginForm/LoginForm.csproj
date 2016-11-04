@@ -61,7 +61,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminUsuarioForm.cs">
+   <Compile Include="AgregarVuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarVuelo.Designer.cs">
+      <DependentUpon>AgregarVuelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarVuelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarVuelos.Designer.cs">
+      <DependentUpon>EditarVuelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarVuelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarVuelos.Designer.cs">
+      <DependentUpon>EliminarVuelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListarVuelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarVuelos.Designer.cs">
+      <DependentUpon>ListarVuelos.cs</DependentUpon>
+    </Compile>
+	    <Compile Include="AdminUsuarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminUsuarioForm.Designer.cs">
@@ -81,7 +105,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdminUsuarioForm.resx">
+	    <EmbeddedResource Include="AgregarVuelo.resx">
+      <DependentUpon>AgregarVuelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarVuelos.resx">
+      <DependentUpon>EditarVuelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarVuelos.resx">
+      <DependentUpon>EliminarVuelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarVuelos.resx">
+      <DependentUpon>ListarVuelos.cs</DependentUpon>
+    </EmbeddedResource>
+	<EmbeddedResource Include="AdminUsuarioForm.resx">
       <DependentUpon>AdminUsuarioForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainPrincipal.resx">
