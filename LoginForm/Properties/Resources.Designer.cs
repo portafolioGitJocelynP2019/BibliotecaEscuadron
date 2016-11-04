@@ -153,6 +153,26 @@ namespace LoginForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MenuEliminar {
+            get {
+                object obj = ResourceManager.GetObject("MenuEliminar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MenuModificar {
+            get {
+                object obj = ResourceManager.GetObject("MenuModificar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MenuOperador {
             get {
                 object obj = ResourceManager.GetObject("MenuOperador", resourceCulture);
@@ -186,6 +206,16 @@ namespace LoginForm.Properties {
         internal static System.Drawing.Bitmap MenuPilotoo {
             get {
                 object obj = ResourceManager.GetObject("MenuPilotoo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MenuRegistrar {
+            get {
+                object obj = ResourceManager.GetObject("MenuRegistrar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

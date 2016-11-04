@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminUsuarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUsuarioForm.Designer.cs">
+      <DependentUpon>AdminUsuarioForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminUsuarioForm.resx">
+      <DependentUpon>AdminUsuarioForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainPrincipal.resx">
       <DependentUpon>MainPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +175,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\archivo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuRegistrar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuModificar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuEliminar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

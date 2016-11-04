@@ -25,15 +25,21 @@ namespace LoginForm
 
         private void lklSalir_MouseClick(object sender, MouseEventArgs e)
         {
-           if (MessageBox.Show(" Desea cerrar esta vista ahora.", "Close Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+
+        }
+
+        private void lblAdmin_Click(object sender, EventArgs e)
+        {
+            AdminUsuarioForm frm = new AdminUsuarioForm();
+            frm.ShowDialog();
+        }
+
+        private void lklSalir_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (MessageBox.Show(" Desea cerrar esta vista ahora.", "Close Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             { Close(); }
             loginForm frm = new loginForm();
             frm.Show();
         }
-
-    
-        
-        
-
     }
 }

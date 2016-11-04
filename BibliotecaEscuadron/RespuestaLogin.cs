@@ -15,4 +15,22 @@ namespace BibliotecaEscuadron
             set { cantidad = value; }
         }
     }
+
+    public class RespuestaInsert
+    {
+        private String iD;
+
+        public string ID
+        {
+            get
+            {
+                return iD;
+            }
+
+            set
+            {
+                iD = value;
+            }
+        }
+    }
 }
