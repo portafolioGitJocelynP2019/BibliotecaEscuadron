@@ -8,15 +8,132 @@ namespace BibliotecaEscuadron
 {
     public class AdministradorUsuario
     {
-        private String username { get; set; }
-        private String password { get; set; }
-        private String nombre { get; set; }
-        private String apellido { get; set; }
-        private String email { get; set; }
-        private DateTime fecha_nacimiento { get; set; }
-        private String rut { get; set; }
-        private int licencia_piloto { get; set; }
-        private int tipoPerfil { get; set; }
+        private String username; 
+        private String password;
+        private String nombre;
+        private String apellido;
+        private String email;
+        private DateTime fecha_nacimiento;
+        private String rut;
+        private int licencia_piloto;
+        private int tipoPerfil;
+
+        public string Username
+        {
+            get
+            {
+                return username;
+            }
+
+            set
+            {
+                username = value;
+            }
+        }
+
+        public string Password
+        {
+            get
+            {
+                return password;
+            }
+
+            set
+            {
+                password = value;
+            }
+        }
+
+        public string Nombre
+        {
+            get
+            {
+                return nombre;
+            }
+
+            set
+            {
+                nombre = value;
+            }
+        }
+
+        public string Apellido
+        {
+            get
+            {
+                return apellido;
+            }
+
+            set
+            {
+                apellido = value;
+            }
+        }
+
+        public string Email
+        {
+            get
+            {
+                return email;
+            }
+
+            set
+            {
+                email = value;
+            }
+        }
+
+        public DateTime Fecha_nacimiento
+        {
+            get
+            {
+                return fecha_nacimiento;
+            }
+
+            set
+            {
+                fecha_nacimiento = value;
+            }
+        }
+
+        public string Rut
+        {
+            get
+            {
+                return rut;
+            }
+
+            set
+            {
+                rut = value;
+            }
+        }
+
+        public int Licencia_piloto
+        {
+            get
+            {
+                return licencia_piloto;
+            }
+
+            set
+            {
+                licencia_piloto = value;
+            }
+        }
+
+        public int TipoPerfil
+        {
+            get
+            {
+                return tipoPerfil;
+            }
+
+            set
+            {
+                tipoPerfil = value;
+            }
+        }
 
         public AdministradorUsuario(string username, string password, string nombre, string apellido, string email, DateTime fecha_nacimiento, string rut, int licencia_piloto, int tipoPerfil)
         {

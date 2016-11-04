@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RestSharp;
+using System.Globalization;
 
 namespace BibliotecaEscuadron
 {
@@ -37,7 +38,15 @@ namespace BibliotecaEscuadron
 
             var client = new RestClient("https://database-clportafoliotrial.db.us2.oraclecloudapps.com");
             var request = new RestRequest("/apex/hawkflying/usuarios/", Method.POST);
-            request.AddJsonBody(registroUsuario);
+            request.AddParameter("apellido", registroUsuario.Apellido);
+            request.AddParameter("email", registroUsuario.Email);
+            request.AddParameter("fecha_Nacimiento", registroUsuario.Fecha_nacimiento.ToString("dd-MMM-yy", CultureInfo.CreateSpecificCulture("en-US")));
+            request.AddParameter("licencia_piloto", registroUsuario.Licencia_piloto);
+            request.AddParameter("nombre", registroUsuario.Nombre);
+            request.AddParameter("password", registroUsuario.Password);
+            request.AddParameter("rut", registroUsuario.Rut);
+            request.AddParameter("tipoPerfil", registroUsuario.TipoPerfil);
+            request.AddParameter("username", registroUsuario.Username);
             var response = client.Execute<RespuestaInsert>(request);
             if (response.ErrorException != null)
             {
