@@ -12,7 +12,7 @@ namespace BibliotecaEscuadron
     {
         public Boolean canLogin(String usuario, String password)
         { 
-            var client = new RestClient("https://database-clportafoliotrial.db.us2.oraclecloudapps.com");
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
             var request = new RestRequest("/apex/hawkflying/usuario/login/{user}/{pwd}", Method.GET);
             request.AddUrlSegment("user", usuario); // adds to GET or URL querystring based on Method
             request.AddUrlSegment("pwd", password); 
@@ -21,7 +21,7 @@ namespace BibliotecaEscuadron
         }
         public Boolean nuevoVuelo(int nro_vuelo, String condicion, int total_tv, String origen, String destino, String fecha, int id_mision)
         {
-            var client = new RestClient("https://database-clportafoliotrial.db.us2.oraclecloudapps.com");
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
             var request = new RestRequest("/apex/hawkflight/vuelos/", Method.POST);
             request.AddParameter("nro_vuelo", nro_vuelo);
             request.AddParameter("condicion", condicion);
@@ -36,7 +36,7 @@ namespace BibliotecaEscuadron
         public Boolean createUser(AdministradorUsuario registroUsuario)
         {
 
-            var client = new RestClient("https://database-clportafoliotrial.db.us2.oraclecloudapps.com");
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
             var request = new RestRequest("/apex/hawkflying/usuarios/", Method.POST);
             request.AddParameter("apellido", registroUsuario.Apellido);
             request.AddParameter("email", registroUsuario.Email);
