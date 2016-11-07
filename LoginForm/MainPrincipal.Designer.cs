@@ -35,6 +35,7 @@
             this.lblAdmin = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblAdmHoras = new System.Windows.Forms.Label();
             this.lblInfoNaves = new System.Windows.Forms.Label();
             this.lblPlanVuelo = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -156,6 +156,18 @@
             this.panel4.Size = new System.Drawing.Size(187, 101);
             this.panel4.TabIndex = 5;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(4, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 15);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Registrar vuelo";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // lblAdmHoras
             // 
             this.lblAdmHoras.AutoSize = true;
@@ -188,6 +200,7 @@
             this.lblPlanVuelo.Size = new System.Drawing.Size(154, 15);
             this.lblPlanVuelo.TabIndex = 0;
             this.lblPlanVuelo.Text = "Registro Plan de Vuelo";
+            this.lblPlanVuelo.Click += new System.EventHandler(this.lblPlanVuelo_Click);
             // 
             // panel3
             // 
@@ -384,18 +397,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(4, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Registrar vuelo";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // MainPrincipal
             // 

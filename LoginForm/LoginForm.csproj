@@ -61,7 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-   <Compile Include="AgregarVuelo.cs">
+    <Compile Include="AgregarVuelo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AgregarVuelo.Designer.cs">
@@ -85,7 +85,7 @@
     <Compile Include="ListarVuelos.Designer.cs">
       <DependentUpon>ListarVuelos.cs</DependentUpon>
     </Compile>
-	    <Compile Include="AdminUsuarioForm.cs">
+    <Compile Include="AdminUsuarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminUsuarioForm.Designer.cs">
@@ -105,7 +105,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-	    <EmbeddedResource Include="AgregarVuelo.resx">
+    <Compile Include="RegistroPlanDeVuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroPlanDeVuelo.Designer.cs">
+      <DependentUpon>RegistroPlanDeVuelo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AgregarVuelo.resx">
       <DependentUpon>AgregarVuelo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarVuelos.resx">
@@ -117,7 +123,7 @@
     <EmbeddedResource Include="ListarVuelos.resx">
       <DependentUpon>ListarVuelos.cs</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="AdminUsuarioForm.resx">
+    <EmbeddedResource Include="AdminUsuarioForm.resx">
       <DependentUpon>AdminUsuarioForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainPrincipal.resx">
@@ -130,6 +136,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroPlanDeVuelo.resx">
+      <DependentUpon>RegistroPlanDeVuelo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

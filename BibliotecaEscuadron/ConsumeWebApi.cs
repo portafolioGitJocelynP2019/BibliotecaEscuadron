@@ -57,5 +57,25 @@ namespace BibliotecaEscuadron
             return response.Data.ID != null;
 
         }
+
+        public Boolean crearPlan(string nombre, string etd, string qrf, string tipo_aeronave, string velocidad__crucero, string reglas_vuelo)
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            var request = new RestRequest("/apex/hawkflying/plan_vuelo/", Method.POST);
+            request.AddParameter("nombre", nombre);
+            request.AddParameter("etd", etd);
+            request.AddParameter("qrf", qrf);
+            request.AddParameter("tipo_aeronave", tipo_aeronave);
+            request.AddParameter("velocidad__crucero", velocidad__crucero);
+            request.AddParameter("reglas_vuelo", reglas_vuelo);
+            var response = client.Execute<PlanVuelo>(request);
+            if (response.ErrorException != null)
+            {
+                Console.WriteLine("error :", response.ErrorException.Message);
+
+                return false;
+            }
+            return response.Data.id_mision != null;
+        }
     }
 }

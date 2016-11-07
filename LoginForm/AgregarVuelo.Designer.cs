@@ -50,7 +50,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.fecha = new System.Windows.Forms.ComboBox();
+            this.fecha = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -277,15 +277,9 @@
             // 
             // fecha
             // 
-            this.fecha.FormattingEnabled = true;
-            this.fecha.Items.AddRange(new object[] {
-            "Santiago",
-            "Arica",
-            "Magallanes",
-            "Punta Arenas"});
             this.fecha.Location = new System.Drawing.Point(300, 324);
             this.fecha.Name = "fecha";
-            this.fecha.Size = new System.Drawing.Size(355, 21);
+            this.fecha.Size = new System.Drawing.Size(355, 20);
             this.fecha.TabIndex = 29;
             // 
             // AgregarVuelo
@@ -349,6 +343,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox fecha;
+        private System.Windows.Forms.TextBox fecha;
     }
 }
