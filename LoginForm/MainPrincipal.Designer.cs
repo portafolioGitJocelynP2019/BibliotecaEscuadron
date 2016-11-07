@@ -56,6 +56,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -100,7 +101,6 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -116,6 +116,7 @@
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.lblAdmin);
+            this.panel5.Controls.Add(this.pictureBox7);
             this.panel5.Location = new System.Drawing.Point(0, 425);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(188, 58);
@@ -126,7 +127,7 @@
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdmin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAdmin.Location = new System.Drawing.Point(4, 11);
+            this.lblAdmin.Location = new System.Drawing.Point(3, 26);
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(154, 15);
             this.lblAdmin.TabIndex = 0;
@@ -137,7 +138,7 @@
             // 
             this.pictureBox7.BackgroundImage = global::LoginForm.Properties.Resources.MenuAdm;
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox7.Location = new System.Drawing.Point(0, 398);
+            this.pictureBox7.Location = new System.Drawing.Point(-1, -6);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(190, 29);
             this.pictureBox7.TabIndex = 6;
@@ -146,12 +147,13 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.lblAdmHoras);
             this.panel4.Controls.Add(this.lblInfoNaves);
             this.panel4.Controls.Add(this.lblPlanVuelo);
             this.panel4.Location = new System.Drawing.Point(0, 318);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(187, 80);
+            this.panel4.Size = new System.Drawing.Size(187, 101);
             this.panel4.TabIndex = 5;
             // 
             // lblAdmHoras
@@ -383,6 +385,18 @@
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(4, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 15);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Registrar vuelo";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // MainPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,5 +465,6 @@
         private System.Windows.Forms.Label lblPlanVuelo;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lblAdmin;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -51,17 +51,17 @@ namespace LoginForm
                 MessageBox.Show("Asegurese de ingresar el total tv.", "Close Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNroVuelo.Focus();
 
-            } else if(txtOrigen.Text.Trim() == "")
+            } else if(comboBox1.Text.Trim() == "")
             {
                 MessageBox.Show("Asegurese de ingresar el origen.", "Close Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNroVuelo.Focus();
 
-            } else if(txtDestino.Text.Trim() == "")
+            } else if(comboBox2.Text.Trim() == "")
             {
                 MessageBox.Show("Asegurese de ingresar el destino.", "Close Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNroVuelo.Focus();
 
-            } else if(txtFecha.Text.Trim() == "")
+            } else if(fecha.Text.Trim() == "")
             {
                 MessageBox.Show("Asegurese de ingresar la fecha.", "Close Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNroVuelo.Focus();
@@ -74,7 +74,7 @@ namespace LoginForm
             } else
             {
                 ConsumeWebApi consume = new ConsumeWebApi();
-                Boolean registrarVuelo = consume.nuevoVuelo(Int32.Parse(txtNroVuelo.Text), txtCondicion.Text, Int32.Parse(txtTotalTv.Text), txtOrigen.Text, txtDestino.Text, txtFecha.Text, Int32.Parse(txtMision.Text));
+                Boolean registrarVuelo = consume.nuevoVuelo(Int32.Parse(txtNroVuelo.Text), txtCondicion.Text, Int32.Parse(txtTotalTv.Text), comboBox1.Text, comboBox2.Text, fecha.Text, Int32.Parse(txtMision.Text));
                 if (registrarVuelo)
                 {
                     MessageBox.Show("Nuevo vuelo creado.", "Close Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -98,6 +98,42 @@ namespace LoginForm
                     ((ComboBox)txt).SelectedIndex = 0;
                 }
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            ListarVuelos vuelo = new ListarVuelos();
+            vuelo.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            AgregarVuelo vuelo = new AgregarVuelo();
+            vuelo.Show();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            EliminarVuelos vuelo = new EliminarVuelos();
+            vuelo.Show();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            EditarVuelos vuelo = new EditarVuelos();
+            vuelo.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+            System.Threading.Thread.CurrentThread.CurrentCulture = culture;
+            System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
         }
     }
 }

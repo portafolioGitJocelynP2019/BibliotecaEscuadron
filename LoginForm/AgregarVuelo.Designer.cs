@@ -31,10 +31,7 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.txtNroVuelo = new System.Windows.Forms.TextBox();
-            this.txtOrigen = new System.Windows.Forms.TextBox();
-            this.txtDestino = new System.Windows.Forms.TextBox();
             this.txtMision = new System.Windows.Forms.TextBox();
-            this.txtFecha = new System.Windows.Forms.TextBox();
             this.txtTotalTv = new System.Windows.Forms.TextBox();
             this.txtCondicion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,6 +48,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.fecha = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,33 +80,12 @@
             this.txtNroVuelo.Size = new System.Drawing.Size(355, 20);
             this.txtNroVuelo.TabIndex = 2;
             // 
-            // txtOrigen
-            // 
-            this.txtOrigen.Location = new System.Drawing.Point(300, 236);
-            this.txtOrigen.Name = "txtOrigen";
-            this.txtOrigen.Size = new System.Drawing.Size(355, 20);
-            this.txtOrigen.TabIndex = 4;
-            // 
-            // txtDestino
-            // 
-            this.txtDestino.Location = new System.Drawing.Point(300, 278);
-            this.txtDestino.Name = "txtDestino";
-            this.txtDestino.Size = new System.Drawing.Size(355, 20);
-            this.txtDestino.TabIndex = 5;
-            // 
             // txtMision
             // 
             this.txtMision.Location = new System.Drawing.Point(300, 361);
             this.txtMision.Name = "txtMision";
             this.txtMision.Size = new System.Drawing.Size(355, 20);
             this.txtMision.TabIndex = 6;
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Location = new System.Drawing.Point(300, 320);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(355, 20);
-            this.txtFecha.TabIndex = 7;
             // 
             // txtTotalTv
             // 
@@ -229,6 +208,7 @@
             this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 23;
             this.label2.Text = "Listado de vuelos";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -240,6 +220,7 @@
             this.label3.Size = new System.Drawing.Size(111, 13);
             this.label3.TabIndex = 24;
             this.label3.Text = "Registrar nuevo vuelo";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -253,6 +234,7 @@
             this.label4.Size = new System.Drawing.Size(72, 13);
             this.label4.TabIndex = 25;
             this.label4.Text = "Eliminar vuelo";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -264,12 +246,56 @@
             this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 26;
             this.label5.Text = "Editar vuelo";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Santiago",
+            "Arica",
+            "Magallanes",
+            "Punta Arenas"});
+            this.comboBox1.Location = new System.Drawing.Point(300, 234);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(355, 21);
+            this.comboBox1.TabIndex = 27;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Santiago",
+            "Arica",
+            "Magallanes",
+            "Punta Arenas"});
+            this.comboBox2.Location = new System.Drawing.Point(300, 282);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(355, 21);
+            this.comboBox2.TabIndex = 28;
+            // 
+            // fecha
+            // 
+            this.fecha.FormattingEnabled = true;
+            this.fecha.Items.AddRange(new object[] {
+            "Santiago",
+            "Arica",
+            "Magallanes",
+            "Punta Arenas"});
+            this.fecha.Location = new System.Drawing.Point(300, 324);
+            this.fecha.Name = "fecha";
+            this.fecha.Size = new System.Drawing.Size(355, 21);
+            this.fecha.TabIndex = 29;
             // 
             // AgregarVuelo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 489);
+            this.Controls.Add(this.fecha);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -286,10 +312,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCondicion);
             this.Controls.Add(this.txtTotalTv);
-            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.txtMision);
-            this.Controls.Add(this.txtDestino);
-            this.Controls.Add(this.txtOrigen);
             this.Controls.Add(this.txtNroVuelo);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblHora);
@@ -307,10 +330,7 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.TextBox txtNroVuelo;
-        private System.Windows.Forms.TextBox txtOrigen;
-        private System.Windows.Forms.TextBox txtDestino;
         private System.Windows.Forms.TextBox txtMision;
-        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.TextBox txtTotalTv;
         private System.Windows.Forms.TextBox txtCondicion;
         private System.Windows.Forms.Label label1;
@@ -327,5 +347,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox fecha;
     }
 }
