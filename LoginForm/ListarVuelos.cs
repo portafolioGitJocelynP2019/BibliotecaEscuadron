@@ -16,5 +16,23 @@ namespace LoginForm
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            ListarVuelos vuelo = new ListarVuelos();
+            vuelo.Show();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            EliminarVuelos vuelo = new EliminarVuelos();
+            vuelo.Show();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            EditarVuelos vuelo = new EditarVuelos();
+            vuelo.Show();
+        }
     }
 }
