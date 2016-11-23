@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarAeronave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarAeronave.Designer.cs">
+      <DependentUpon>AgregarAeronave.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarVuelo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     <Compile Include="RegistroPlanDeVuelo.Designer.cs">
       <DependentUpon>RegistroPlanDeVuelo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgregarAeronave.resx">
+      <DependentUpon>AgregarAeronave.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarVuelo.resx">
       <DependentUpon>AgregarVuelo.cs</DependentUpon>
     </EmbeddedResource>

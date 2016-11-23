@@ -53,5 +53,11 @@ namespace LoginForm
             RegistroPlanDeVuelo vuelo = new RegistroPlanDeVuelo();
             vuelo.Show();
         }
+
+        private void lblRegAeronave_Click(object sender, EventArgs e)
+        {
+            AgregarAeronave aeronave = new AgregarAeronave();
+            aeronave.Show();
+        }
     }
 }

@@ -314,6 +314,7 @@
             this.lblRegAeronave.Size = new System.Drawing.Size(165, 15);
             this.lblRegAeronave.TabIndex = 1;
             this.lblRegAeronave.Text = "Administracion Aeronave";
+            this.lblRegAeronave.Click += new System.EventHandler(this.lblRegAeronave_Click);
             // 
             // lblRegPiloto
             // 

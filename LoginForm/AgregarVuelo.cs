@@ -51,16 +51,6 @@ namespace LoginForm
                 MessageBox.Show("Asegurese de ingresar el total tv.", "Close Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNroVuelo.Focus();
 
-            } else if(comboBox1.Text.Trim() == "")
-            {
-                MessageBox.Show("Asegurese de ingresar el origen.", "Close Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtNroVuelo.Focus();
-
-            } else if(comboBox2.Text.Trim() == "")
-            {
-                MessageBox.Show("Asegurese de ingresar el destino.", "Close Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtNroVuelo.Focus();
-
             } else if(fecha.Text.Trim() == "")
             {
                 MessageBox.Show("Asegurese de ingresar la fecha.", "Close Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -74,7 +64,7 @@ namespace LoginForm
             } else
             {
                 ConsumeWebApi consume = new ConsumeWebApi();
-                Boolean registrarVuelo = consume.nuevoVuelo(Int32.Parse(txtNroVuelo.Text), txtCondicion.Text, Int32.Parse(txtTotalTv.Text), comboBox1.Text, comboBox2.Text, fecha.Text, Int32.Parse(txtMision.Text));
+                Boolean registrarVuelo = consume.nuevoVuelo(Int32.Parse(txtNroVuelo.Text), txtCondicion.Text, Int32.Parse(txtTotalTv.Text), fecha.Text, Int32.Parse(txtMision.Text), Int32.Parse(txtAeronave.Text));
                 if (registrarVuelo)
                 {
                     MessageBox.Show("Nuevo vuelo creado.", "Close Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -134,6 +124,11 @@ namespace LoginForm
             System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
             System.Threading.Thread.CurrentThread.CurrentCulture = culture;
             System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
+        }
+
+        private void fecha_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
