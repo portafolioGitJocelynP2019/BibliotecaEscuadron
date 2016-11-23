@@ -33,5 +33,25 @@ namespace LoginForm
             else
             { MessageBox.Show("error"); }
         }
+
+        private void dtFechNac_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegistrar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnModificar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

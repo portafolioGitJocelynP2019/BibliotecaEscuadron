@@ -41,6 +41,17 @@ namespace BibliotecaEscuadron
             return true;
         }
 
+        public Boolean nuevoPiloto(String fecha_vencimientomae, int hora_total_vuelo, int id_usuario)
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            var request = new RestRequest("/apex/hawkflying/piloto/", Method.POST);
+            request.AddParameter("fecha_vencimientomae", fecha_vencimientomae);
+            request.AddParameter("hora_total_vuelo", hora_total_vuelo);
+            request.AddParameter("id_usuario", id_usuario);
+            var response = client.Execute<Piloto>(request);
+            return true;
+        }
+
         public Boolean nuevoVuelo(int nro_vuelo, String condicion, int total_tv, String fecha, int id_mision, int aeronave)
         {
             var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");

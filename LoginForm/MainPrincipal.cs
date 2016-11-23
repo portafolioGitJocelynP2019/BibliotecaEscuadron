@@ -59,5 +59,11 @@ namespace LoginForm
             AgregarAeronave aeronave = new AgregarAeronave();
             aeronave.Show();
         }
+
+        private void lblRegPiloto_Click(object sender, EventArgs e)
+        {
+            agregarPiloto piloto = new agregarPiloto();
+            piloto.Show();
+        }
     }
 }

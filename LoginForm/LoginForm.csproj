@@ -67,6 +67,12 @@
     <Compile Include="AgregarAeronave.Designer.cs">
       <DependentUpon>AgregarAeronave.cs</DependentUpon>
     </Compile>
+    <Compile Include="agregarPiloto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarPiloto.Designer.cs">
+      <DependentUpon>agregarPiloto.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarVuelo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </Compile>
     <EmbeddedResource Include="AgregarAeronave.resx">
       <DependentUpon>AgregarAeronave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="agregarPiloto.resx">
+      <DependentUpon>agregarPiloto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarVuelo.resx">
       <DependentUpon>AgregarVuelo.cs</DependentUpon>

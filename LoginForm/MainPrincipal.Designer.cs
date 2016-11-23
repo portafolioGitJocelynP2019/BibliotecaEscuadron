@@ -326,6 +326,7 @@
             this.lblRegPiloto.Size = new System.Drawing.Size(134, 15);
             this.lblRegPiloto.TabIndex = 0;
             this.lblRegPiloto.Text = "Aministracion piloto";
+            this.lblRegPiloto.Click += new System.EventHandler(this.lblRegPiloto_Click);
             // 
             // pictureBox6
             // 
