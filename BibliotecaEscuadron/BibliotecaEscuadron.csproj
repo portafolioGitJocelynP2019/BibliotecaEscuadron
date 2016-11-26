@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="AdministradorUsuario.cs" />
     <Compile Include="Aeronave.cs" />
+    <Compile Include="Componente.cs" />
+    <Compile Include="ComponenteResponseList.cs" />
     <Compile Include="ConsumeWebApi.cs" />
     <Compile Include="IJsonSerializer.cs" />
     <Compile Include="NewtonsoftJsonSerializer.cs" />

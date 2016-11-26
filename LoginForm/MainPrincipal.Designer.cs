@@ -303,6 +303,7 @@
             this.lblRegComponente.Size = new System.Drawing.Size(187, 15);
             this.lblRegComponente.TabIndex = 2;
             this.lblRegComponente.Text = "Administracion Componente";
+            this.lblRegComponente.Click += new System.EventHandler(this.lblRegComponente_Click);
             // 
             // lblRegAeronave
             // 

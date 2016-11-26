@@ -65,5 +65,10 @@ namespace LoginForm
             agregarPiloto piloto = new agregarPiloto();
             piloto.Show();
         }
+
+        private void lblRegComponente_Click(object sender, EventArgs e)
+        {
+            MComponente componente = new MComponente();
+        }
     }
 }

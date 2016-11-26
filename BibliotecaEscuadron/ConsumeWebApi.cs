@@ -104,5 +104,93 @@ namespace BibliotecaEscuadron
             return response.Data.ID != null;
 
         }
+
+        public Boolean nuevoComponente(string nombre_componente, int cantidad_horasC, int id_padreComp, int cantidad_horasFab, int cantidad_diasFab, int id_tipoComponente, int id_especialista, int id_estructura)
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            var request = new RestRequest("/apex/hawkflying/componente/", Method.POST);
+
+            request.AddHeader("Content-type", "application/json");
+            request.AddJsonBody(new
+            {
+                nombre = nombre_componente,
+                cant_horas = cantidad_horasC,
+                id_padre_componente = id_padreComp,
+                cantidad_horas_fabricante = cantidad_horasFab,
+                cantidad_dias_fabricante = cantidad_diasFab,
+                id_tipo_componente = id_tipoComponente,
+                especialista_id_mec_compo = id_especialista,
+                estructura_id = id_estructura
+            });
+
+            var response = client.Execute<Componente>(request);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                return true;
+            else
+                return false;
+        }
+
+        public Boolean editarComponente(string nombre_componente, int cantidad_horasC, int id_padreComp, int cantidad_horasFab, int cantidad_diasFab, int id_tipoComponente, int id_especialista, int id_estructura, int idComponente)
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            var request = new RestRequest("/apex/hawkflying/componente/" + idComponente, Method.PUT);
+
+            Componente componente = new Componente();
+            componente.nombre = nombre_componente;
+            componente.cant_horas = cantidad_horasC;
+            componente.id_padre_componente = id_padreComp;
+            componente.cantidad_horas_fabricante = cantidad_horasFab;
+            componente.cantidad_dias_fabricante = cantidad_diasFab;
+            componente.especialista_id_mec_compo = id_especialista;
+            componente.id_tipo_componente = id_tipoComponente;
+            componente.estructura_id = id_estructura;
+            request.AddHeader("Content-type", "application/json");
+
+            request.AddJsonBody(new
+            {
+                nombre = nombre_componente,
+                cant_horas = cantidad_horasC,
+                id_padre_componente = id_padreComp,
+                cantidad_horas_fabricante = cantidad_horasFab,
+                cantidad_dias_fabricante = cantidad_diasFab,
+                id_tipo_componente = id_tipoComponente,
+                especialista_id_mec_compo = id_especialista,
+                estructura_id = id_estructura
+            });
+
+            var response = client.Execute<Componente>(request);
+            return true;
+        }
+
+        /// <summary>
+        /// Identificador del componente a eliminar
+        /// </summary>
+        /// <param name="idComponente"></param>       
+        public Boolean eliminarComponente(int idComponente)
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            var request = new RestRequest("/apex/hawkflying/eliminarComponente", Method.PUT);
+
+            request.AddJsonBody(new { id = idComponente });
+
+            var response = client.Execute<Componente>(request);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                return true;
+            else
+                return false;
+
+        }
+
+        public ComponenteResponseList buscarComponente(string nombre_componente)
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            string service = "/apex/hawkflying/buscarComponente/" + nombre_componente;
+            var request = new RestRequest(service, Method.GET);
+
+            var response = client.Execute<ComponenteResponseList>(request);
+            return (ComponenteResponseList)response.Data;
+        }
     }
 }
