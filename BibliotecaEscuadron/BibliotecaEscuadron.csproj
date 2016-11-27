@@ -52,8 +52,11 @@
   <ItemGroup>
     <Compile Include="AdministradorUsuario.cs" />
     <Compile Include="ConsumeWebApi.cs" />
+    <Compile Include="Correo.cs" />
     <Compile Include="IJsonSerializer.cs" />
+    <Compile Include="Mantenimiento.cs" />
     <Compile Include="NewtonsoftJsonSerializer.cs" />
+    <Compile Include="PlanMantenimiento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

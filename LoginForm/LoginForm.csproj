@@ -48,6 +48,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -61,11 +65,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-   <Compile Include="AgregarVuelo.cs">
+    <Compile Include="AgregarVuelo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AgregarVuelo.Designer.cs">
       <DependentUpon>AgregarVuelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarMantenimiento.Designer.cs">
+      <DependentUpon>ConsultarMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarPlanMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarPlanMantenimiento.Designer.cs">
+      <DependentUpon>ConsultarPlanMantenimiento.cs</DependentUpon>
     </Compile>
     <Compile Include="EditarVuelos.cs">
       <SubType>Form</SubType>
@@ -85,7 +101,7 @@
     <Compile Include="ListarVuelos.Designer.cs">
       <DependentUpon>ListarVuelos.cs</DependentUpon>
     </Compile>
-	    <Compile Include="AdminUsuarioForm.cs">
+    <Compile Include="AdminUsuarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminUsuarioForm.Designer.cs">
@@ -105,8 +121,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-	    <EmbeddedResource Include="AgregarVuelo.resx">
+    <EmbeddedResource Include="AgregarVuelo.resx">
       <DependentUpon>AgregarVuelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarMantenimiento.resx">
+      <DependentUpon>ConsultarMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarPlanMantenimiento.resx">
+      <DependentUpon>ConsultarPlanMantenimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarVuelos.resx">
       <DependentUpon>EditarVuelos.cs</DependentUpon>
@@ -117,7 +139,7 @@
     <EmbeddedResource Include="ListarVuelos.resx">
       <DependentUpon>ListarVuelos.cs</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="AdminUsuarioForm.resx">
+    <EmbeddedResource Include="AdminUsuarioForm.resx">
       <DependentUpon>AdminUsuarioForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainPrincipal.resx">
@@ -131,6 +153,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

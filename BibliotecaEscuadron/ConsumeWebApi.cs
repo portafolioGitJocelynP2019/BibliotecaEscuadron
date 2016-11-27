@@ -10,6 +10,16 @@ namespace BibliotecaEscuadron
 {
     public class ConsumeWebApi
     {
+
+        public Boolean ConsultarMantenimiento(int idmantenimiento)
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            var request = new RestRequest("/apex/hawkflying/mantenimiento/{idmantenimiento}", Method.GET);
+            request.AddParameter("idmantenimiento", idmantenimiento);
+            var response = client.Execute<RespuestaMantenimiento>(request);
+            return true;
+        }
+
         public Boolean canLogin(String usuario, String password)
         { 
             var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
@@ -57,5 +67,6 @@ namespace BibliotecaEscuadron
             return response.Data.ID != null;
 
         }
+
     }
 }

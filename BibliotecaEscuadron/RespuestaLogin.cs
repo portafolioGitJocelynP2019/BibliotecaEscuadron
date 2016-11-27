@@ -33,4 +33,15 @@ namespace BibliotecaEscuadron
             }
         }
     }
+
+    public class RespuestaMantenimiento
+    {
+        private int idmantenimiento;
+
+        public int idMantenimiento
+        {
+            get{return idmantenimiento;}
+            set{idmantenimiento = value;}
+        }
+    }
 }
