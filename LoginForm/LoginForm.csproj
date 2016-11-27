@@ -65,7 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgregarVuelo.cs">
+   <Compile Include="AgregarVuelo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AgregarVuelo.Designer.cs">
@@ -119,9 +119,15 @@
     <Compile Include="MainPrincipalFom.Designer.cs">
       <DependentUpon>MainPrincipalFom.cs</DependentUpon>
     </Compile>
+    <Compile Include="MComponente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MComponente.designer.cs">
+      <DependentUpon>MComponente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AgregarVuelo.resx">
+	    <EmbeddedResource Include="AgregarVuelo.resx">
       <DependentUpon>AgregarVuelo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarMantenimiento.resx">
@@ -148,12 +154,14 @@
     <EmbeddedResource Include="MainPrincipalFom.resx">
       <DependentUpon>MainPrincipalFom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MComponente.resx">
+      <DependentUpon>MComponente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

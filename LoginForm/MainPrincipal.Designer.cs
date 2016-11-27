@@ -35,6 +35,7 @@
             this.lblAdmin = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblAdmHoras = new System.Windows.Forms.Label();
             this.lblInfoNaves = new System.Windows.Forms.Label();
             this.lblPlanVuelo = new System.Windows.Forms.Label();
@@ -102,7 +103,6 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -119,8 +119,7 @@
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.lblAdmin);
-            this.panel5.Location = new System.Drawing.Point(0, 654);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel5.Location = new System.Drawing.Point(0, 425);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(281, 88);
             this.panel5.TabIndex = 7;
@@ -130,8 +129,7 @@
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdmin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAdmin.Location = new System.Drawing.Point(6, 17);
-            this.lblAdmin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAdmin.Location = new System.Drawing.Point(4, 11);
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(213, 22);
             this.lblAdmin.TabIndex = 0;
@@ -142,8 +140,7 @@
             // 
             this.pictureBox7.BackgroundImage = global::LoginForm.Properties.Resources.MenuAdm;
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox7.Location = new System.Drawing.Point(0, 612);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox7.Location = new System.Drawing.Point(0, 398);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(284, 44);
             this.pictureBox7.TabIndex = 6;
@@ -152,14 +149,27 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.lblAdmHoras);
             this.panel4.Controls.Add(this.lblInfoNaves);
             this.panel4.Controls.Add(this.lblPlanVuelo);
             this.panel4.Location = new System.Drawing.Point(0, 489);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(280, 122);
+            this.panel4.Size = new System.Drawing.Size(187, 80);
             this.panel4.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(4, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 15);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Registrar vuelo";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblAdmHoras
             // 
@@ -196,6 +206,7 @@
             this.lblPlanVuelo.Size = new System.Drawing.Size(216, 22);
             this.lblPlanVuelo.TabIndex = 0;
             this.lblPlanVuelo.Text = "Registro Plan de Vuelo";
+            this.lblPlanVuelo.Click += new System.EventHandler(this.lblPlanVuelo_Click);
             // 
             // panel3
             // 
@@ -309,6 +320,7 @@
             this.lblRegComponente.Size = new System.Drawing.Size(259, 22);
             this.lblRegComponente.TabIndex = 2;
             this.lblRegComponente.Text = "Administracion Componente";
+            this.lblRegComponente.Click += new System.EventHandler(this.lblRegComponente_Click);
             // 
             // lblRegAeronave
             // 
@@ -321,6 +333,7 @@
             this.lblRegAeronave.Size = new System.Drawing.Size(232, 22);
             this.lblRegAeronave.TabIndex = 1;
             this.lblRegAeronave.Text = "Administracion Aeronave";
+            this.lblRegAeronave.Click += new System.EventHandler(this.lblRegAeronave_Click);
             // 
             // lblRegPiloto
             // 
@@ -333,6 +346,7 @@
             this.lblRegPiloto.Size = new System.Drawing.Size(185, 22);
             this.lblRegPiloto.TabIndex = 0;
             this.lblRegPiloto.Text = "Aministracion piloto";
+            this.lblRegPiloto.Click += new System.EventHandler(this.lblRegPiloto_Click);
             // 
             // pictureBox6
             // 
@@ -482,5 +496,6 @@
         private System.Windows.Forms.Label lblPlanVuelo;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lblAdmin;
+        private System.Windows.Forms.Label label2;
     }
 }

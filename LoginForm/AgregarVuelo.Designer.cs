@@ -31,17 +31,12 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.txtNroVuelo = new System.Windows.Forms.TextBox();
-            this.txtOrigen = new System.Windows.Forms.TextBox();
-            this.txtDestino = new System.Windows.Forms.TextBox();
             this.txtMision = new System.Windows.Forms.TextBox();
-            this.txtFecha = new System.Windows.Forms.TextBox();
             this.txtTotalTv = new System.Windows.Forms.TextBox();
             this.txtCondicion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.asdasd = new System.Windows.Forms.Label();
             this.asdasdsd = new System.Windows.Forms.Label();
-            this.dddd = new System.Windows.Forms.Label();
-            this.ioooo = new System.Windows.Forms.Label();
             this.asd = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
@@ -51,6 +46,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.fecha = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtAeronave = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,33 +78,12 @@
             this.txtNroVuelo.Size = new System.Drawing.Size(355, 20);
             this.txtNroVuelo.TabIndex = 2;
             // 
-            // txtOrigen
-            // 
-            this.txtOrigen.Location = new System.Drawing.Point(300, 236);
-            this.txtOrigen.Name = "txtOrigen";
-            this.txtOrigen.Size = new System.Drawing.Size(355, 20);
-            this.txtOrigen.TabIndex = 4;
-            // 
-            // txtDestino
-            // 
-            this.txtDestino.Location = new System.Drawing.Point(300, 278);
-            this.txtDestino.Name = "txtDestino";
-            this.txtDestino.Size = new System.Drawing.Size(355, 20);
-            this.txtDestino.TabIndex = 5;
-            // 
             // txtMision
             // 
-            this.txtMision.Location = new System.Drawing.Point(300, 361);
+            this.txtMision.Location = new System.Drawing.Point(300, 287);
             this.txtMision.Name = "txtMision";
             this.txtMision.Size = new System.Drawing.Size(355, 20);
             this.txtMision.TabIndex = 6;
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Location = new System.Drawing.Point(300, 320);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(355, 20);
-            this.txtFecha.TabIndex = 7;
             // 
             // txtTotalTv
             // 
@@ -134,7 +111,7 @@
             // asdasd
             // 
             this.asdasd.AutoSize = true;
-            this.asdasd.Location = new System.Drawing.Point(233, 368);
+            this.asdasd.Location = new System.Drawing.Point(226, 290);
             this.asdasd.Name = "asdasd";
             this.asdasd.Size = new System.Drawing.Size(36, 13);
             this.asdasd.TabIndex = 13;
@@ -143,30 +120,11 @@
             // asdasdsd
             // 
             this.asdasdsd.AutoSize = true;
-            this.asdasdsd.Location = new System.Drawing.Point(233, 327);
+            this.asdasdsd.Location = new System.Drawing.Point(235, 238);
             this.asdasdsd.Name = "asdasdsd";
             this.asdasdsd.Size = new System.Drawing.Size(34, 13);
             this.asdasdsd.TabIndex = 14;
             this.asdasdsd.Text = "fecha";
-            // 
-            // dddd
-            // 
-            this.dddd.AutoSize = true;
-            this.dddd.Location = new System.Drawing.Point(233, 285);
-            this.dddd.Name = "dddd";
-            this.dddd.Size = new System.Drawing.Size(43, 13);
-            this.dddd.TabIndex = 15;
-            this.dddd.Text = "Destino";
-            // 
-            // ioooo
-            // 
-            this.ioooo.AutoSize = true;
-            this.ioooo.Location = new System.Drawing.Point(229, 243);
-            this.ioooo.Name = "ioooo";
-            this.ioooo.Size = new System.Drawing.Size(38, 13);
-            this.ioooo.TabIndex = 16;
-            this.ioooo.Text = "Origen";
-            this.ioooo.Click += new System.EventHandler(this.txtOrigen_Click);
             // 
             // asd
             // 
@@ -229,6 +187,7 @@
             this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 23;
             this.label2.Text = "Listado de vuelos";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -240,6 +199,7 @@
             this.label3.Size = new System.Drawing.Size(111, 13);
             this.label3.TabIndex = 24;
             this.label3.Text = "Registrar nuevo vuelo";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -253,6 +213,7 @@
             this.label4.Size = new System.Drawing.Size(72, 13);
             this.label4.TabIndex = 25;
             this.label4.Text = "Eliminar vuelo";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -264,12 +225,40 @@
             this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 26;
             this.label5.Text = "Editar vuelo";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // fecha
+            // 
+            this.fecha.Location = new System.Drawing.Point(300, 238);
+            this.fecha.Name = "fecha";
+            this.fecha.Size = new System.Drawing.Size(355, 20);
+            this.fecha.TabIndex = 29;
+            this.fecha.TextChanged += new System.EventHandler(this.fecha_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(229, 333);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 13);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "Aeronave";
+            // 
+            // txtAeronave
+            // 
+            this.txtAeronave.Location = new System.Drawing.Point(300, 325);
+            this.txtAeronave.Name = "txtAeronave";
+            this.txtAeronave.Size = new System.Drawing.Size(355, 20);
+            this.txtAeronave.TabIndex = 31;
             // 
             // AgregarVuelo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 489);
+            this.Controls.Add(this.txtAeronave);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.fecha);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -279,17 +268,12 @@
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.asd);
-            this.Controls.Add(this.ioooo);
-            this.Controls.Add(this.dddd);
             this.Controls.Add(this.asdasdsd);
             this.Controls.Add(this.asdasd);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCondicion);
             this.Controls.Add(this.txtTotalTv);
-            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.txtMision);
-            this.Controls.Add(this.txtDestino);
-            this.Controls.Add(this.txtOrigen);
             this.Controls.Add(this.txtNroVuelo);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblHora);
@@ -307,17 +291,12 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.TextBox txtNroVuelo;
-        private System.Windows.Forms.TextBox txtOrigen;
-        private System.Windows.Forms.TextBox txtDestino;
         private System.Windows.Forms.TextBox txtMision;
-        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.TextBox txtTotalTv;
         private System.Windows.Forms.TextBox txtCondicion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label asdasd;
         private System.Windows.Forms.Label asdasdsd;
-        private System.Windows.Forms.Label dddd;
-        private System.Windows.Forms.Label ioooo;
         private System.Windows.Forms.Label asd;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnIngresar;
@@ -327,5 +306,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox fecha;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtAeronave;
     }
 }

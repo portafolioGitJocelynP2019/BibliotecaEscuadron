@@ -41,17 +41,5 @@ namespace LoginForm
             loginForm frm = new loginForm();
             frm.Show();
         }
-
-        private void lblMantenimiento_Click(object sender, EventArgs e)
-        {
-            ConsultarMantenimiento form = new ConsultarMantenimiento();
-            form.ShowDialog();
-        }
-
-        private void lblPlanMant_Click(object sender, EventArgs e)
-        {
-            ConsultarPlanMantenimiento form = new ConsultarPlanMantenimiento();
-            form.ShowDialog();
-        }
     }
 }

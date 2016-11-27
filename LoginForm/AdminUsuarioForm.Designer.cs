@@ -155,6 +155,7 @@
             this.dtFechNac.Name = "dtFechNac";
             this.dtFechNac.Size = new System.Drawing.Size(298, 26);
             this.dtFechNac.TabIndex = 15;
+            this.dtFechNac.ValueChanged += new System.EventHandler(this.dtFechNac_ValueChanged);
             // 
             // txtEmail
             // 
@@ -277,6 +278,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(258, 30);
             this.txtNombre.TabIndex = 3;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // lblRut
             // 
@@ -349,6 +351,7 @@
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(253, 50);
             this.btnModificar.TabIndex = 1;
+            this.btnModificar.Paint += new System.Windows.Forms.PaintEventHandler(this.btnModificar_Paint);
             // 
             // btnRegistrar
             // 
@@ -361,6 +364,7 @@
             this.btnRegistrar.Size = new System.Drawing.Size(253, 50);
             this.btnRegistrar.TabIndex = 0;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            this.btnRegistrar.Paint += new System.Windows.Forms.PaintEventHandler(this.btnRegistrar_Paint);
             // 
             // pictureBox1
             // 

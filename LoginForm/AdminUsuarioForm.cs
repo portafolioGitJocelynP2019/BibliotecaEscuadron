@@ -21,6 +21,7 @@ namespace LoginForm
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Close();
+            //cambio prueba
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -32,6 +33,26 @@ namespace LoginForm
             { MessageBox.Show("creado"); }
             else
             { MessageBox.Show("error"); }
+        }
+
+        private void dtFechNac_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegistrar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnModificar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

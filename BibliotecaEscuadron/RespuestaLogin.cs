@@ -9,10 +9,38 @@ namespace BibliotecaEscuadron
     public class RespuestaLogin
     {
         private int cantidad;
+        private int tipoPerfil;
+        private int idUsuario;
         public int Cantidad
         {
             get { return cantidad; }
             set { cantidad = value; }
+        }
+
+        public int TipoPerfil
+        {
+            get
+            {
+                return tipoPerfil;
+            }
+
+            set
+            {
+                tipoPerfil = value;
+            }
+        }
+
+        public int IdUsuario
+        {
+            get
+            {
+                return idUsuario;
+            }
+
+            set
+            {
+                idUsuario = value;
+            }
         }
     }
 
