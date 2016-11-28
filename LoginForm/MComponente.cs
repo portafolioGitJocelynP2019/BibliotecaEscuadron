@@ -142,5 +142,10 @@ namespace LoginForm
             }
             
         }
+
+        private void MComponente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

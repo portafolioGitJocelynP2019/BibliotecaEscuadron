@@ -65,10 +65,9 @@
             // lklSalir
             // 
             this.lklSalir.AutoSize = true;
-            this.lklSalir.Location = new System.Drawing.Point(-54, 202);
-            this.lklSalir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lklSalir.Location = new System.Drawing.Point(-36, 131);
             this.lklSalir.Name = "lklSalir";
-            this.lklSalir.Size = new System.Drawing.Size(40, 20);
+            this.lklSalir.Size = new System.Drawing.Size(27, 13);
             this.lklSalir.TabIndex = 13;
             this.lklSalir.TabStop = true;
             this.lklSalir.Text = "Salir";
@@ -79,10 +78,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label1.Location = new System.Drawing.Point(423, 195);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(282, 127);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(406, 47);
+            this.label1.Size = new System.Drawing.Size(273, 31);
             this.label1.TabIndex = 9;
             this.label1.Text = "Registro de Usuario";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -90,10 +88,9 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(1228, 235);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel1.Location = new System.Drawing.Point(819, 153);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(40, 20);
+            this.linkLabel1.Size = new System.Drawing.Size(27, 13);
             this.linkLabel1.TabIndex = 14;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Salir";
@@ -121,11 +118,9 @@
             this.gpbDatos.Controls.Add(this.lblNombre);
             this.gpbDatos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gpbDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbDatos.Location = new System.Drawing.Point(64, 260);
-            this.gpbDatos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gpbDatos.Location = new System.Drawing.Point(43, 169);
             this.gpbDatos.Name = "gpbDatos";
-            this.gpbDatos.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gpbDatos.Size = new System.Drawing.Size(1204, 263);
+            this.gpbDatos.Size = new System.Drawing.Size(803, 171);
             this.gpbDatos.TabIndex = 15;
             this.gpbDatos.TabStop = false;
             this.gpbDatos.Text = "DATOS";
@@ -133,52 +128,46 @@
             // cboTipoPerfil
             // 
             this.cboTipoPerfil.FormattingEnabled = true;
-            this.cboTipoPerfil.Location = new System.Drawing.Point(597, 220);
-            this.cboTipoPerfil.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboTipoPerfil.Location = new System.Drawing.Point(398, 143);
             this.cboTipoPerfil.Name = "cboTipoPerfil";
-            this.cboTipoPerfil.Size = new System.Drawing.Size(258, 28);
+            this.cboTipoPerfil.Size = new System.Drawing.Size(173, 21);
             this.cboTipoPerfil.TabIndex = 17;
             // 
             // cboPiloto
             // 
             this.cboPiloto.FormattingEnabled = true;
-            this.cboPiloto.Location = new System.Drawing.Point(194, 220);
-            this.cboPiloto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboPiloto.Location = new System.Drawing.Point(129, 143);
             this.cboPiloto.Name = "cboPiloto";
-            this.cboPiloto.Size = new System.Drawing.Size(258, 28);
+            this.cboPiloto.Size = new System.Drawing.Size(173, 21);
             this.cboPiloto.TabIndex = 16;
             // 
             // dtFechNac
             // 
-            this.dtFechNac.Location = new System.Drawing.Point(876, 103);
-            this.dtFechNac.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtFechNac.Location = new System.Drawing.Point(584, 67);
             this.dtFechNac.Name = "dtFechNac";
-            this.dtFechNac.Size = new System.Drawing.Size(298, 26);
+            this.dtFechNac.Size = new System.Drawing.Size(200, 20);
             this.dtFechNac.TabIndex = 15;
             this.dtFechNac.ValueChanged += new System.EventHandler(this.dtFechNac_ValueChanged);
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(597, 163);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEmail.Location = new System.Drawing.Point(398, 106);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(258, 26);
+            this.txtEmail.Size = new System.Drawing.Size(173, 20);
             this.txtEmail.TabIndex = 14;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(597, 102);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPassword.Location = new System.Drawing.Point(398, 66);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(258, 26);
+            this.txtPassword.Size = new System.Drawing.Size(173, 20);
             this.txtPassword.TabIndex = 13;
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(597, 42);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUserName.Location = new System.Drawing.Point(398, 27);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(258, 26);
+            this.txtUserName.Size = new System.Drawing.Size(173, 20);
             this.txtUserName.TabIndex = 12;
             // 
             // lblFechNac
@@ -187,10 +176,9 @@
             this.lblFechNac.Enabled = false;
             this.lblFechNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechNac.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblFechNac.Location = new System.Drawing.Point(910, 42);
-            this.lblFechNac.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechNac.Location = new System.Drawing.Point(607, 27);
             this.lblFechNac.Name = "lblFechNac";
-            this.lblFechNac.Size = new System.Drawing.Size(185, 25);
+            this.lblFechNac.Size = new System.Drawing.Size(133, 16);
             this.lblFechNac.TabIndex = 11;
             this.lblFechNac.Text = "Fecha Nacimiento";
             // 
@@ -199,10 +187,9 @@
             this.lblTipoPerfil.AutoSize = true;
             this.lblTipoPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoPerfil.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblTipoPerfil.Location = new System.Drawing.Point(476, 222);
-            this.lblTipoPerfil.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTipoPerfil.Location = new System.Drawing.Point(317, 144);
             this.lblTipoPerfil.Name = "lblTipoPerfil";
-            this.lblTipoPerfil.Size = new System.Drawing.Size(110, 25);
+            this.lblTipoPerfil.Size = new System.Drawing.Size(80, 16);
             this.lblTipoPerfil.TabIndex = 10;
             this.lblTipoPerfil.Text = "Tipo Perfil";
             // 
@@ -211,10 +198,9 @@
             this.lblPiloto.AutoSize = true;
             this.lblPiloto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPiloto.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblPiloto.Location = new System.Drawing.Point(27, 225);
-            this.lblPiloto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPiloto.Location = new System.Drawing.Point(18, 146);
             this.lblPiloto.Name = "lblPiloto";
-            this.lblPiloto.Size = new System.Drawing.Size(160, 25);
+            this.lblPiloto.Size = new System.Drawing.Size(117, 16);
             this.lblPiloto.TabIndex = 9;
             this.lblPiloto.Text = "Piloto asignado";
             // 
@@ -223,10 +209,9 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblEmail.Location = new System.Drawing.Point(477, 163);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmail.Location = new System.Drawing.Point(318, 106);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(65, 25);
+            this.lblEmail.Size = new System.Drawing.Size(47, 16);
             this.lblEmail.TabIndex = 8;
             this.lblEmail.Text = "Email";
             // 
@@ -235,10 +220,9 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblPassword.Location = new System.Drawing.Point(477, 102);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPassword.Location = new System.Drawing.Point(318, 66);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(106, 25);
+            this.lblPassword.Size = new System.Drawing.Size(76, 16);
             this.lblPassword.TabIndex = 7;
             this.lblPassword.Text = "Password";
             // 
@@ -247,36 +231,32 @@
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblUser.Location = new System.Drawing.Point(476, 42);
-            this.lblUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUser.Location = new System.Drawing.Point(317, 27);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(113, 25);
+            this.lblUser.Size = new System.Drawing.Size(82, 16);
             this.lblUser.TabIndex = 6;
             this.lblUser.Text = "UserName";
             // 
             // txtRut
             // 
-            this.txtRut.Location = new System.Drawing.Point(194, 166);
-            this.txtRut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtRut.Location = new System.Drawing.Point(129, 108);
             this.txtRut.Name = "txtRut";
-            this.txtRut.Size = new System.Drawing.Size(258, 26);
+            this.txtRut.Size = new System.Drawing.Size(173, 20);
             this.txtRut.TabIndex = 5;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(194, 103);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtApellido.Location = new System.Drawing.Point(129, 67);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(258, 26);
+            this.txtApellido.Size = new System.Drawing.Size(173, 20);
             this.txtApellido.TabIndex = 4;
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(194, 42);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombre.Location = new System.Drawing.Point(129, 27);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(258, 30);
+            this.txtNombre.Size = new System.Drawing.Size(173, 22);
             this.txtNombre.TabIndex = 3;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
@@ -285,10 +265,9 @@
             this.lblRut.AutoSize = true;
             this.lblRut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRut.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblRut.Location = new System.Drawing.Point(28, 166);
-            this.lblRut.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRut.Location = new System.Drawing.Point(19, 108);
             this.lblRut.Name = "lblRut";
-            this.lblRut.Size = new System.Drawing.Size(44, 25);
+            this.lblRut.Size = new System.Drawing.Size(31, 16);
             this.lblRut.TabIndex = 2;
             this.lblRut.Text = "Rut";
             // 
@@ -297,10 +276,9 @@
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblApellido.Location = new System.Drawing.Point(26, 105);
-            this.lblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblApellido.Location = new System.Drawing.Point(17, 68);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(90, 25);
+            this.lblApellido.Size = new System.Drawing.Size(66, 16);
             this.lblApellido.TabIndex = 1;
             this.lblApellido.Text = "Apellido";
             // 
@@ -309,10 +287,9 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblNombre.Location = new System.Drawing.Point(26, 40);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(17, 26);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(87, 25);
+            this.lblNombre.Size = new System.Drawing.Size(63, 16);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             // 
@@ -321,11 +298,9 @@
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.btnRegistrar);
-            this.groupBox1.Location = new System.Drawing.Point(64, 532);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Location = new System.Drawing.Point(43, 346);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(1204, 140);
+            this.groupBox1.Size = new System.Drawing.Size(803, 91);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "OPCIONES";
@@ -335,10 +310,9 @@
             this.btnEliminar.BackgroundImage = global::LoginForm.Properties.Resources.MenuEliminar;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.btnEliminar.Location = new System.Drawing.Point(838, 42);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEliminar.Location = new System.Drawing.Point(559, 27);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(253, 50);
+            this.btnEliminar.Size = new System.Drawing.Size(170, 34);
             this.btnEliminar.TabIndex = 2;
             // 
             // btnModificar
@@ -346,10 +320,9 @@
             this.btnModificar.BackgroundImage = global::LoginForm.Properties.Resources.MenuModificar;
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.btnModificar.Location = new System.Drawing.Point(482, 46);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnModificar.Location = new System.Drawing.Point(321, 30);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(253, 50);
+            this.btnModificar.Size = new System.Drawing.Size(170, 34);
             this.btnModificar.TabIndex = 1;
             this.btnModificar.Paint += new System.Windows.Forms.PaintEventHandler(this.btnModificar_Paint);
             // 
@@ -358,42 +331,38 @@
             this.btnRegistrar.BackgroundImage = global::LoginForm.Properties.Resources.MenuRegistrar;
             this.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRegistrar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.btnRegistrar.Location = new System.Drawing.Point(128, 46);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRegistrar.Location = new System.Drawing.Point(85, 30);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(253, 50);
+            this.btnRegistrar.Size = new System.Drawing.Size(170, 34);
             this.btnRegistrar.TabIndex = 0;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            this.btnRegistrar.Paint += new System.Windows.Forms.PaintEventHandler(this.btnRegistrar_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::LoginForm.Properties.Resources.LogoIntra;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 191);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 124);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::LoginForm.Properties.Resources.front;
-            this.pictureBox2.Location = new System.Drawing.Point(172, -6);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(115, -4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1155, 197);
+            this.pictureBox2.Size = new System.Drawing.Size(770, 128);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
             // AdminUsuarioForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1324, 685);
+            this.ClientSize = new System.Drawing.Size(883, 445);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gpbDatos);
@@ -403,7 +372,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Location = new System.Drawing.Point(220, 193);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AdminUsuarioForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Administracion de Usuarios";

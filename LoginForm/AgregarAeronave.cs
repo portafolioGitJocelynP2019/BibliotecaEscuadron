@@ -31,5 +31,10 @@ namespace LoginForm
                 MessageBox.Show("Ha ocurrido un error.", "Close Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void AgregarAeronave_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

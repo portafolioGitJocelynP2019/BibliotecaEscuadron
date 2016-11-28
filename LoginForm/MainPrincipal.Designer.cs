@@ -49,26 +49,27 @@
             this.lblRegComponente = new System.Windows.Forms.Label();
             this.lblRegAeronave = new System.Windows.Forms.Label();
             this.lblRegPiloto = new System.Windows.Forms.Label();
+            this.lklSalir = new System.Windows.Forms.LinkLabel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.lklSalir = new System.Windows.Forms.LinkLabel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -100,6 +101,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
@@ -116,10 +118,10 @@
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.lblAdmin);
-            this.panel5.Location = new System.Drawing.Point(1, 433);
+            this.panel5.Location = new System.Drawing.Point(-3, 443);
             this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(188, 25);
+            this.panel5.Size = new System.Drawing.Size(192, 35);
             this.panel5.TabIndex = 7;
             // 
             // lblAdmin
@@ -127,7 +129,7 @@
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdmin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAdmin.Location = new System.Drawing.Point(-2, 0);
+            this.lblAdmin.Location = new System.Drawing.Point(2, 6);
             this.lblAdmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(154, 15);
@@ -323,6 +325,27 @@
             this.lblRegPiloto.Text = "Aministracion piloto";
             this.lblRegPiloto.Click += new System.EventHandler(this.lblRegPiloto_Click);
             // 
+            // lklSalir
+            // 
+            this.lklSalir.AutoSize = true;
+            this.lklSalir.Location = new System.Drawing.Point(12, 157);
+            this.lklSalir.Name = "lklSalir";
+            this.lklSalir.Size = new System.Drawing.Size(27, 13);
+            this.lklSalir.TabIndex = 8;
+            this.lklSalir.TabStop = true;
+            this.lklSalir.Text = "Salir";
+            this.lklSalir.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklSalir_LinkClicked);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::LoginForm.Properties.Resources.foto1;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(220, 193);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(899, 484);
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
             // pictureBox6
             // 
             this.pictureBox6.BackgroundImage = global::LoginForm.Properties.Resources.MenuPilotoo;
@@ -354,37 +377,6 @@
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = global::LoginForm.Properties.Resources.MenuAdm;
-            this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox7.Location = new System.Drawing.Point(0, 398);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(284, 44);
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
-            // 
-            // lklSalir
-            // 
-            this.lklSalir.AutoSize = true;
-            this.lklSalir.Location = new System.Drawing.Point(12, 157);
-            this.lklSalir.Name = "lklSalir";
-            this.lklSalir.Size = new System.Drawing.Size(27, 13);
-            this.lklSalir.TabIndex = 8;
-            this.lklSalir.TabStop = true;
-            this.lklSalir.Text = "Salir";
-            this.lklSalir.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklSalir_LinkClicked);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::LoginForm.Properties.Resources.foto1;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(220, 193);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(899, 484);
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::LoginForm.Properties.Resources.LogoIntra;
@@ -405,12 +397,31 @@
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::LoginForm.Properties.Resources.MenuAdm;
+            this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox7.Location = new System.Drawing.Point(0, 398);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(284, 44);
+            this.pictureBox7.TabIndex = 6;
+            this.pictureBox7.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackgroundImage = global::LoginForm.Properties.Resources.MenuAdm;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel6.Location = new System.Drawing.Point(-3, 411);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(192, 37);
+            this.panel6.TabIndex = 8;
+            // 
             // MainPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1064, 683);
+            this.ClientSize = new System.Drawing.Size(1175, 712);
             this.ControlBox = false;
             this.Controls.Add(this.lklSalir);
             this.Controls.Add(this.pictureBox3);
@@ -432,13 +443,13 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,5 +485,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lblAdmin;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel6;
     }
 }

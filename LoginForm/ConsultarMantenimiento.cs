@@ -87,7 +87,7 @@ namespace LoginForm
                         txtIdPadreComp.Text = mantenimiento.Idpadrecomponente.ToString();
                         txtIdTipoComp.Text = mantenimiento.idTipoComponente.ToString();
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         //Si no encuentra un id de mantenimiento, cae en el catch, limpia los textbox y muestra una advertencia indicando que no existe el id
                         txtIdMantencion.Text = "";

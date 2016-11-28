@@ -39,10 +39,7 @@ namespace LoginForm
 
         }
 
-        private void btnRegistrar_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
 
         private void btnModificar_Paint(object sender, PaintEventArgs e)
         {

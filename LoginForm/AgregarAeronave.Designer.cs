@@ -392,6 +392,7 @@
             this.Controls.Add(this.lblHora);
             this.Name = "AgregarAeronave";
             this.Text = "AgregarAeronave";
+            this.Load += new System.EventHandler(this.AgregarAeronave_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
