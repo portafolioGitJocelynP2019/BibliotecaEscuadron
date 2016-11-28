@@ -75,11 +75,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Sitka Text", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label1.Location = new System.Drawing.Point(263, 126);
+            this.label1.Location = new System.Drawing.Point(394, 194);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(686, 53);
+            this.label1.Size = new System.Drawing.Size(976, 64);
             this.label1.TabIndex = 2;
             this.label1.Text = "Escuela de Vuelo Escuadrilla Halcon";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -90,9 +91,10 @@
             this.lblFecha.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblFecha.Location = new System.Drawing.Point(917, 110);
+            this.lblFecha.Location = new System.Drawing.Point(1376, 169);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(41, 13);
+            this.lblFecha.Size = new System.Drawing.Size(59, 20);
             this.lblFecha.TabIndex = 5;
             this.lblFecha.Text = "label2";
             // 
@@ -107,19 +109,19 @@
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Location = new System.Drawing.Point(7, 193);
+            this.panel1.Location = new System.Drawing.Point(10, 297);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(192, 484);
+            this.panel1.Size = new System.Drawing.Size(286, 742);
             this.panel1.TabIndex = 6;
             // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.lblAdmin);
-            this.panel5.Controls.Add(this.pictureBox7);
             this.panel5.Location = new System.Drawing.Point(0, 425);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(188, 58);
+            this.panel5.Size = new System.Drawing.Size(281, 88);
             this.panel5.TabIndex = 7;
             // 
             // lblAdmin
@@ -127,9 +129,9 @@
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdmin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAdmin.Location = new System.Drawing.Point(3, 26);
+            this.lblAdmin.Location = new System.Drawing.Point(4, 11);
             this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(154, 15);
+            this.lblAdmin.Size = new System.Drawing.Size(213, 22);
             this.lblAdmin.TabIndex = 0;
             this.lblAdmin.Text = "Administracion usuario";
             this.lblAdmin.Click += new System.EventHandler(this.lblAdmin_Click);
@@ -138,9 +140,9 @@
             // 
             this.pictureBox7.BackgroundImage = global::LoginForm.Properties.Resources.MenuAdm;
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox7.Location = new System.Drawing.Point(-1, -6);
+            this.pictureBox7.Location = new System.Drawing.Point(0, 398);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(190, 29);
+            this.pictureBox7.Size = new System.Drawing.Size(284, 44);
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
             // 
@@ -151,9 +153,10 @@
             this.panel4.Controls.Add(this.lblAdmHoras);
             this.panel4.Controls.Add(this.lblInfoNaves);
             this.panel4.Controls.Add(this.lblPlanVuelo);
-            this.panel4.Location = new System.Drawing.Point(0, 318);
+            this.panel4.Location = new System.Drawing.Point(0, 489);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(187, 101);
+            this.panel4.Size = new System.Drawing.Size(187, 80);
             this.panel4.TabIndex = 5;
             // 
             // label2
@@ -173,9 +176,10 @@
             this.lblAdmHoras.AutoSize = true;
             this.lblAdmHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdmHoras.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAdmHoras.Location = new System.Drawing.Point(2, 59);
+            this.lblAdmHoras.Location = new System.Drawing.Point(3, 91);
+            this.lblAdmHoras.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAdmHoras.Name = "lblAdmHoras";
-            this.lblAdmHoras.Size = new System.Drawing.Size(153, 15);
+            this.lblAdmHoras.Size = new System.Drawing.Size(216, 22);
             this.lblAdmHoras.TabIndex = 2;
             this.lblAdmHoras.Text = "Control Horas de vuelo";
             // 
@@ -184,9 +188,10 @@
             this.lblInfoNaves.AutoSize = true;
             this.lblInfoNaves.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoNaves.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblInfoNaves.Location = new System.Drawing.Point(3, 34);
+            this.lblInfoNaves.Location = new System.Drawing.Point(4, 52);
+            this.lblInfoNaves.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInfoNaves.Name = "lblInfoNaves";
-            this.lblInfoNaves.Size = new System.Drawing.Size(146, 15);
+            this.lblInfoNaves.Size = new System.Drawing.Size(203, 22);
             this.lblInfoNaves.TabIndex = 1;
             this.lblInfoNaves.Text = "Informacion de Naves";
             // 
@@ -195,9 +200,10 @@
             this.lblPlanVuelo.AutoSize = true;
             this.lblPlanVuelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlanVuelo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPlanVuelo.Location = new System.Drawing.Point(2, 11);
+            this.lblPlanVuelo.Location = new System.Drawing.Point(3, 17);
+            this.lblPlanVuelo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPlanVuelo.Name = "lblPlanVuelo";
-            this.lblPlanVuelo.Size = new System.Drawing.Size(154, 15);
+            this.lblPlanVuelo.Size = new System.Drawing.Size(216, 22);
             this.lblPlanVuelo.TabIndex = 0;
             this.lblPlanVuelo.Text = "Registro Plan de Vuelo";
             this.lblPlanVuelo.Click += new System.EventHandler(this.lblPlanVuelo_Click);
@@ -208,9 +214,10 @@
             this.panel3.Controls.Add(this.lblEstadoAeronave);
             this.panel3.Controls.Add(this.lblMantRealizado);
             this.panel3.Controls.Add(this.lblPlanMant);
-            this.panel3.Location = new System.Drawing.Point(0, 210);
+            this.panel3.Location = new System.Drawing.Point(0, 323);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(189, 81);
+            this.panel3.Size = new System.Drawing.Size(282, 124);
             this.panel3.TabIndex = 4;
             // 
             // lblEstadoAeronave
@@ -218,9 +225,10 @@
             this.lblEstadoAeronave.AutoSize = true;
             this.lblEstadoAeronave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstadoAeronave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblEstadoAeronave.Location = new System.Drawing.Point(2, 54);
+            this.lblEstadoAeronave.Location = new System.Drawing.Point(3, 83);
+            this.lblEstadoAeronave.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEstadoAeronave.Name = "lblEstadoAeronave";
-            this.lblEstadoAeronave.Size = new System.Drawing.Size(184, 15);
+            this.lblEstadoAeronave.Size = new System.Drawing.Size(262, 22);
             this.lblEstadoAeronave.TabIndex = 2;
             this.lblEstadoAeronave.Text = "Consulta  estado Aeronaves";
             // 
@@ -229,9 +237,10 @@
             this.lblMantRealizado.AutoSize = true;
             this.lblMantRealizado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMantRealizado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMantRealizado.Location = new System.Drawing.Point(1, 31);
+            this.lblMantRealizado.Location = new System.Drawing.Point(2, 48);
+            this.lblMantRealizado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMantRealizado.Name = "lblMantRealizado";
-            this.lblMantRealizado.Size = new System.Drawing.Size(165, 15);
+            this.lblMantRealizado.Size = new System.Drawing.Size(226, 22);
             this.lblMantRealizado.TabIndex = 1;
             this.lblMantRealizado.Text = "Reporte Mantenimientos";
             // 
@@ -240,11 +249,13 @@
             this.lblPlanMant.AutoSize = true;
             this.lblPlanMant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlanMant.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPlanMant.Location = new System.Drawing.Point(3, 8);
+            this.lblPlanMant.Location = new System.Drawing.Point(4, 12);
+            this.lblPlanMant.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPlanMant.Name = "lblPlanMant";
-            this.lblPlanMant.Size = new System.Drawing.Size(136, 15);
+            this.lblPlanMant.Size = new System.Drawing.Size(185, 22);
             this.lblPlanMant.TabIndex = 0;
             this.lblPlanMant.Text = "Plan Mantenimiento";
+            this.lblPlanMant.Click += new System.EventHandler(this.lblPlanMant_Click);
             // 
             // panel2
             // 
@@ -255,9 +266,10 @@
             this.panel2.Controls.Add(this.lblRegComponente);
             this.panel2.Controls.Add(this.lblRegAeronave);
             this.panel2.Controls.Add(this.lblRegPiloto);
-            this.panel2.Location = new System.Drawing.Point(0, 29);
+            this.panel2.Location = new System.Drawing.Point(0, 45);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(190, 150);
+            this.panel2.Size = new System.Drawing.Size(284, 230);
             this.panel2.TabIndex = 3;
             // 
             // lblVuelo
@@ -265,9 +277,10 @@
             this.lblVuelo.AutoSize = true;
             this.lblVuelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVuelo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblVuelo.Location = new System.Drawing.Point(3, 75);
+            this.lblVuelo.Location = new System.Drawing.Point(4, 115);
+            this.lblVuelo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVuelo.Name = "lblVuelo";
-            this.lblVuelo.Size = new System.Drawing.Size(149, 15);
+            this.lblVuelo.Size = new System.Drawing.Size(208, 22);
             this.lblVuelo.TabIndex = 5;
             this.lblVuelo.Text = "Administracion Vuelos";
             // 
@@ -276,20 +289,23 @@
             this.lblMantenimiento.AutoSize = true;
             this.lblMantenimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMantenimiento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMantenimiento.Location = new System.Drawing.Point(2, 100);
+            this.lblMantenimiento.Location = new System.Drawing.Point(3, 154);
+            this.lblMantenimiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMantenimiento.Name = "lblMantenimiento";
-            this.lblMantenimiento.Size = new System.Drawing.Size(102, 15);
+            this.lblMantenimiento.Size = new System.Drawing.Size(138, 22);
             this.lblMantenimiento.TabIndex = 4;
             this.lblMantenimiento.Text = "Mantenimintos";
+            this.lblMantenimiento.Click += new System.EventHandler(this.lblMantenimiento_Click);
             // 
             // lblRegHistorico
             // 
             this.lblRegHistorico.AutoSize = true;
             this.lblRegHistorico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegHistorico.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblRegHistorico.Location = new System.Drawing.Point(3, 124);
+            this.lblRegHistorico.Location = new System.Drawing.Point(4, 191);
+            this.lblRegHistorico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegHistorico.Name = "lblRegHistorico";
-            this.lblRegHistorico.Size = new System.Drawing.Size(122, 15);
+            this.lblRegHistorico.Size = new System.Drawing.Size(170, 22);
             this.lblRegHistorico.TabIndex = 3;
             this.lblRegHistorico.Text = "Registro Historico";
             // 
@@ -298,20 +314,23 @@
             this.lblRegComponente.AutoSize = true;
             this.lblRegComponente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegComponente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblRegComponente.Location = new System.Drawing.Point(2, 51);
+            this.lblRegComponente.Location = new System.Drawing.Point(3, 78);
+            this.lblRegComponente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegComponente.Name = "lblRegComponente";
-            this.lblRegComponente.Size = new System.Drawing.Size(187, 15);
+            this.lblRegComponente.Size = new System.Drawing.Size(259, 22);
             this.lblRegComponente.TabIndex = 2;
             this.lblRegComponente.Text = "Administracion Componente";
+            this.lblRegComponente.Click += new System.EventHandler(this.lblRegComponente_Click);
             // 
             // lblRegAeronave
             // 
             this.lblRegAeronave.AutoSize = true;
             this.lblRegAeronave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegAeronave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblRegAeronave.Location = new System.Drawing.Point(1, 27);
+            this.lblRegAeronave.Location = new System.Drawing.Point(2, 42);
+            this.lblRegAeronave.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegAeronave.Name = "lblRegAeronave";
-            this.lblRegAeronave.Size = new System.Drawing.Size(165, 15);
+            this.lblRegAeronave.Size = new System.Drawing.Size(232, 22);
             this.lblRegAeronave.TabIndex = 1;
             this.lblRegAeronave.Text = "Administracion Aeronave";
             this.lblRegAeronave.Click += new System.EventHandler(this.lblRegAeronave_Click);
@@ -321,9 +340,10 @@
             this.lblRegPiloto.AutoSize = true;
             this.lblRegPiloto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegPiloto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblRegPiloto.Location = new System.Drawing.Point(1, 5);
+            this.lblRegPiloto.Location = new System.Drawing.Point(2, 8);
+            this.lblRegPiloto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegPiloto.Name = "lblRegPiloto";
-            this.lblRegPiloto.Size = new System.Drawing.Size(134, 15);
+            this.lblRegPiloto.Size = new System.Drawing.Size(185, 22);
             this.lblRegPiloto.TabIndex = 0;
             this.lblRegPiloto.Text = "Aministracion piloto";
             this.lblRegPiloto.Click += new System.EventHandler(this.lblRegPiloto_Click);
@@ -332,9 +352,10 @@
             // 
             this.pictureBox6.BackgroundImage = global::LoginForm.Properties.Resources.MenuPilotoo;
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox6.Location = new System.Drawing.Point(-1, 287);
+            this.pictureBox6.Location = new System.Drawing.Point(-2, 442);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(191, 40);
+            this.pictureBox6.Size = new System.Drawing.Size(286, 60);
             this.pictureBox6.TabIndex = 2;
             this.pictureBox6.TabStop = false;
             // 
@@ -342,9 +363,10 @@
             // 
             this.pictureBox5.BackgroundImage = global::LoginForm.Properties.Resources.MenuPiloto;
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Location = new System.Drawing.Point(-2, 178);
+            this.pictureBox5.Location = new System.Drawing.Point(-3, 274);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(192, 40);
+            this.pictureBox5.Size = new System.Drawing.Size(287, 60);
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
             // 
@@ -353,18 +375,20 @@
             this.pictureBox4.BackgroundImage = global::LoginForm.Properties.Resources.MenuOperador1;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Location = new System.Drawing.Point(-1, -2);
+            this.pictureBox4.Location = new System.Drawing.Point(-2, -3);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(191, 40);
+            this.pictureBox4.Size = new System.Drawing.Size(286, 60);
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
             // lklSalir
             // 
             this.lklSalir.AutoSize = true;
-            this.lklSalir.Location = new System.Drawing.Point(12, 157);
+            this.lklSalir.Location = new System.Drawing.Point(18, 242);
+            this.lklSalir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lklSalir.Name = "lklSalir";
-            this.lklSalir.Size = new System.Drawing.Size(27, 13);
+            this.lklSalir.Size = new System.Drawing.Size(40, 20);
             this.lklSalir.TabIndex = 8;
             this.lklSalir.TabStop = true;
             this.lklSalir.Text = "Salir";
@@ -374,9 +398,10 @@
             // 
             this.pictureBox3.BackgroundImage = global::LoginForm.Properties.Resources.foto1;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(220, 193);
+            this.pictureBox3.Location = new System.Drawing.Point(330, 297);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(899, 484);
+            this.pictureBox3.Size = new System.Drawing.Size(1348, 745);
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
@@ -384,28 +409,30 @@
             // 
             this.pictureBox1.BackgroundImage = global::LoginForm.Properties.Resources.LogoIntra;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Location = new System.Drawing.Point(13, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(20, -2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 124);
+            this.pictureBox1.Size = new System.Drawing.Size(150, 191);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::LoginForm.Properties.Resources.front;
-            this.pictureBox2.Location = new System.Drawing.Point(130, -5);
+            this.pictureBox2.Location = new System.Drawing.Point(195, -8);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(987, 128);
+            this.pictureBox2.Size = new System.Drawing.Size(1480, 197);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
             // MainPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1133, 692);
+            this.ClientSize = new System.Drawing.Size(1700, 1065);
             this.ControlBox = false;
             this.Controls.Add(this.lklSalir);
             this.Controls.Add(this.pictureBox3);
@@ -414,6 +441,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Escuela de vuelo escuadrilla Halcon";

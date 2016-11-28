@@ -41,29 +41,5 @@ namespace LoginForm
             loginForm frm = new loginForm();
             frm.Show();
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-            AgregarVuelo vuelo = new AgregarVuelo();
-            vuelo.Show();
-        }
-
-        private void lblPlanVuelo_Click(object sender, EventArgs e)
-        {
-            RegistroPlanDeVuelo vuelo = new RegistroPlanDeVuelo();
-            vuelo.Show();
-        }
-
-        private void lblRegAeronave_Click(object sender, EventArgs e)
-        {
-            AgregarAeronave aeronave = new AgregarAeronave();
-            aeronave.Show();
-        }
-
-        private void lblRegPiloto_Click(object sender, EventArgs e)
-        {
-            agregarPiloto piloto = new agregarPiloto();
-            piloto.Show();
-        }
     }
 }
