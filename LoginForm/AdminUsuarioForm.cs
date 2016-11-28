@@ -21,7 +21,6 @@ namespace LoginForm
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Close();
-            //cambio prueba
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
