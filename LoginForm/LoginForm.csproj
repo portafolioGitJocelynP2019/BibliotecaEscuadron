@@ -65,7 +65,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-   <Compile Include="AgregarVuelo.cs">
+    <Compile Include="AgregarAeronave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarAeronave.Designer.cs">
+      <DependentUpon>AgregarAeronave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="agregarPiloto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarPiloto.Designer.cs">
+      <DependentUpon>agregarPiloto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarVuelo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AgregarVuelo.Designer.cs">
@@ -127,7 +139,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-	    <EmbeddedResource Include="AgregarVuelo.resx">
+    <Compile Include="RegistroPlanDeVuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroPlanDeVuelo.Designer.cs">
+      <DependentUpon>RegistroPlanDeVuelo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AgregarAeronave.resx">
+      <DependentUpon>AgregarAeronave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="agregarPiloto.resx">
+      <DependentUpon>agregarPiloto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarVuelo.resx">
       <DependentUpon>AgregarVuelo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarMantenimiento.resx">
@@ -161,6 +185,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroPlanDeVuelo.resx">
+      <DependentUpon>RegistroPlanDeVuelo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
