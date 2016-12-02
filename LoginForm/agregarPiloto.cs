@@ -30,7 +30,6 @@ namespace LoginForm
             Boolean registrarPiloto = consume.nuevoPiloto(dtFechNac.Value.ToString("dd-MMMM-yyyy", CultureInfo.CreateSpecificCulture("en-US")), 0,  Int32.Parse(txtUsuario.Text));
             if (registrarPiloto)
             {
-                MessageBox.Show(dtFechNac.Value.ToString("dd-MMMM-yyyy", CultureInfo.CreateSpecificCulture("en-US")));
                 MessageBox.Show("Nueva aeronave creada.", "Close Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
@@ -68,7 +67,7 @@ namespace LoginForm
         private void button4_Click(object sender, EventArgs e)
         {
             ConsumeWebApi consume = new ConsumeWebApi();
-            ComponenteResponseListPiloto coincidencias = consume.buscarPiloto(Int32.Parse(txtUsuario.Text));
+            ComponenteResponseListPiloto coincidencias = consume.buscarPiloto(Int32.Parse(txtIdPiloto.Text));
 
             if (coincidencias.items.Count == 1)
             {

@@ -82,10 +82,10 @@ namespace BibliotecaEscuadron
             return true;
         }
 
-        public ComponenteResponseListPiloto buscarPiloto(int id_usuario)
+        public ComponenteResponseListPiloto buscarPiloto(int id_piloto)
         {
             var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
-            string service = "/apex/hawkflying/buscarPiloto/" + id_usuario;
+            string service = "/apex/hawkflying/buscarPiloto/" + id_piloto;
             var request = new RestRequest(service, Method.GET);
 
             var response = client.Execute<ComponenteResponseListPiloto>(request);
