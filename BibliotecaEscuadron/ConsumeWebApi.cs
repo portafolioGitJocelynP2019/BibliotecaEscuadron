@@ -62,6 +62,52 @@ namespace BibliotecaEscuadron
             return true;
         }
 
+        public Boolean editarPiloto(String fecha_vencimientomae, int id_usuario, int idPiloto)
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            var request = new RestRequest("/apex/hawkflying/pilots/" + idPiloto, Method.PUT);
+
+            Piloto piloto = new Piloto();
+            piloto.fecha_vencimientomae= fecha_vencimientomae;
+            piloto.id_usuario = id_usuario;
+            request.AddHeader("Content-type", "application/json");
+
+            request.AddJsonBody(new
+            {
+                fecha = fecha_vencimientomae,
+                usuario = id_usuario
+            });
+
+            var response = client.Execute<Piloto>(request);
+            return true;
+        }
+
+        public ComponenteResponseListPiloto buscarPiloto(int id_usuario)
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            string service = "/apex/hawkflying/buscarPiloto/" + id_usuario;
+            var request = new RestRequest(service, Method.GET);
+
+            var response = client.Execute<ComponenteResponseListPiloto>(request);
+            return (ComponenteResponseListPiloto)response.Data;
+        }
+
+        public Boolean eliminarPiloto(int id_piloto)
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            var request = new RestRequest("/apex/hawkflying/piloto/", Method.DELETE);
+
+            request.AddJsonBody(new { id_piloto = id_piloto });
+
+            var response = client.Execute<Piloto>(request);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                return true;
+            else
+                return true;
+
+        }
+
         public Boolean nuevoVuelo(int nro_vuelo, String condicion, int total_tv, String fecha, int id_mision, int aeronave)
         {
             var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
