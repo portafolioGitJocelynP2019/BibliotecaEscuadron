@@ -57,6 +57,7 @@
     <Compile Include="Aeronave.cs" />
     <Compile Include="Componente.cs" />
     <Compile Include="ComponenteResponseList.cs" />
+    <Compile Include="ComponenteResponseListAeronave.cs" />
     <Compile Include="ComponenteResponseListPiloto.cs" />
     <Compile Include="ConsumeWebApi.cs" />
     <Compile Include="Correo.cs" />

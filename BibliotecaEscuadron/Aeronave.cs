@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BibliotecaEscuadron
 {
-    class Aeronave
+    public class Aeronave
     {
         public int id_aeronave { get; set; }
         public int tipo { get; set; }
