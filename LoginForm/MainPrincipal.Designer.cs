@@ -51,13 +51,13 @@
             this.lblRegPiloto = new System.Windows.Forms.Label();
             this.lklSalir = new System.Windows.Forms.LinkLabel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -91,7 +91,7 @@
             this.lblFecha.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblFecha.Location = new System.Drawing.Point(917, 110);
+            this.lblFecha.Location = new System.Drawing.Point(887, 110);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(41, 13);
             this.lblFecha.TabIndex = 5;
@@ -121,7 +121,7 @@
             this.panel5.Location = new System.Drawing.Point(-3, 443);
             this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(192, 35);
+            this.panel5.Size = new System.Drawing.Size(192, 39);
             this.panel5.TabIndex = 7;
             // 
             // lblAdmin
@@ -146,7 +146,7 @@
             this.panel4.Controls.Add(this.lblPlanVuelo);
             this.panel4.Location = new System.Drawing.Point(0, 320);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(190, 96);
+            this.panel4.Size = new System.Drawing.Size(190, 100);
             this.panel4.TabIndex = 5;
             // 
             // label2
@@ -154,7 +154,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(3, 54);
+            this.label2.Location = new System.Drawing.Point(3, 51);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 15);
@@ -177,7 +177,7 @@
             this.lblInfoNaves.AutoSize = true;
             this.lblInfoNaves.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoNaves.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblInfoNaves.Location = new System.Drawing.Point(3, 34);
+            this.lblInfoNaves.Location = new System.Drawing.Point(3, 29);
             this.lblInfoNaves.Name = "lblInfoNaves";
             this.lblInfoNaves.Size = new System.Drawing.Size(146, 15);
             this.lblInfoNaves.TabIndex = 1;
@@ -188,7 +188,7 @@
             this.lblPlanVuelo.AutoSize = true;
             this.lblPlanVuelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlanVuelo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPlanVuelo.Location = new System.Drawing.Point(2, 11);
+            this.lblPlanVuelo.Location = new System.Drawing.Point(2, 4);
             this.lblPlanVuelo.Name = "lblPlanVuelo";
             this.lblPlanVuelo.Size = new System.Drawing.Size(154, 15);
             this.lblPlanVuelo.TabIndex = 0;
@@ -346,6 +346,15 @@
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
+            // panel6
+            // 
+            this.panel6.BackgroundImage = global::LoginForm.Properties.Resources.MenuAdm;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel6.Location = new System.Drawing.Point(-3, 411);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(192, 36);
+            this.panel6.TabIndex = 8;
+            // 
             // pictureBox6
             // 
             this.pictureBox6.BackgroundImage = global::LoginForm.Properties.Resources.MenuPilotoo;
@@ -407,21 +416,12 @@
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
             // 
-            // panel6
-            // 
-            this.panel6.BackgroundImage = global::LoginForm.Properties.Resources.MenuAdm;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel6.Location = new System.Drawing.Point(-3, 411);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(192, 37);
-            this.panel6.TabIndex = 8;
-            // 
             // MainPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1175, 712);
+            this.ClientSize = new System.Drawing.Size(1121, 680);
             this.ControlBox = false;
             this.Controls.Add(this.lklSalir);
             this.Controls.Add(this.pictureBox3);

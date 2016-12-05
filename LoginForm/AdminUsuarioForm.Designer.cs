@@ -51,6 +51,9 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblVechaMae = new System.Windows.Forms.Label();
+            this.fecVencMae = new System.Windows.Forms.DateTimePicker();
+            this.btnBuscar = new System.Windows.Forms.Panel();
             this.btnEliminar = new System.Windows.Forms.Panel();
             this.btnModificar = new System.Windows.Forms.Panel();
             this.btnRegistrar = new System.Windows.Forms.Panel();
@@ -98,6 +101,8 @@
             // 
             // gpbDatos
             // 
+            this.gpbDatos.Controls.Add(this.fecVencMae);
+            this.gpbDatos.Controls.Add(this.lblVechaMae);
             this.gpbDatos.Controls.Add(this.cboTipoPerfil);
             this.gpbDatos.Controls.Add(this.cboPiloto);
             this.gpbDatos.Controls.Add(this.dtFechNac);
@@ -120,10 +125,10 @@
             this.gpbDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbDatos.Location = new System.Drawing.Point(43, 169);
             this.gpbDatos.Name = "gpbDatos";
-            this.gpbDatos.Size = new System.Drawing.Size(803, 171);
+            this.gpbDatos.Size = new System.Drawing.Size(803, 206);
             this.gpbDatos.TabIndex = 15;
             this.gpbDatos.TabStop = false;
-            this.gpbDatos.Text = "DATOS";
+            this.gpbDatos.Text = "Datos";
             // 
             // cboTipoPerfil
             // 
@@ -132,11 +137,12 @@
             this.cboTipoPerfil.Name = "cboTipoPerfil";
             this.cboTipoPerfil.Size = new System.Drawing.Size(173, 21);
             this.cboTipoPerfil.TabIndex = 17;
+            this.cboTipoPerfil.SelectedValueChanged += new System.EventHandler(this.cboTipoPerfil_SelectedValueChanged);
             // 
             // cboPiloto
             // 
             this.cboPiloto.FormattingEnabled = true;
-            this.cboPiloto.Location = new System.Drawing.Point(129, 143);
+            this.cboPiloto.Location = new System.Drawing.Point(134, 143);
             this.cboPiloto.Name = "cboPiloto";
             this.cboPiloto.Size = new System.Drawing.Size(173, 21);
             this.cboPiloto.TabIndex = 16;
@@ -147,7 +153,6 @@
             this.dtFechNac.Name = "dtFechNac";
             this.dtFechNac.Size = new System.Drawing.Size(200, 20);
             this.dtFechNac.TabIndex = 15;
-            this.dtFechNac.ValueChanged += new System.EventHandler(this.dtFechNac_ValueChanged);
             // 
             // txtEmail
             // 
@@ -239,14 +244,14 @@
             // 
             // txtRut
             // 
-            this.txtRut.Location = new System.Drawing.Point(129, 108);
+            this.txtRut.Location = new System.Drawing.Point(133, 108);
             this.txtRut.Name = "txtRut";
             this.txtRut.Size = new System.Drawing.Size(173, 20);
             this.txtRut.TabIndex = 5;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(129, 67);
+            this.txtApellido.Location = new System.Drawing.Point(134, 67);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(173, 20);
             this.txtApellido.TabIndex = 4;
@@ -254,11 +259,10 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(129, 27);
+            this.txtNombre.Location = new System.Drawing.Point(135, 27);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(173, 22);
             this.txtNombre.TabIndex = 3;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // lblRut
             // 
@@ -295,43 +299,75 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.btnRegistrar);
-            this.groupBox1.Location = new System.Drawing.Point(43, 346);
+            this.groupBox1.Location = new System.Drawing.Point(43, 375);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(803, 91);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "OPCIONES";
             // 
+            // lblVechaMae
+            // 
+            this.lblVechaMae.AutoSize = true;
+            this.lblVechaMae.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVechaMae.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblVechaMae.Location = new System.Drawing.Point(607, 109);
+            this.lblVechaMae.Name = "lblVechaMae";
+            this.lblVechaMae.Size = new System.Drawing.Size(174, 16);
+            this.lblVechaMae.TabIndex = 18;
+            this.lblVechaMae.Text = "Fecha Vencimiento Mae";
+            // 
+            // fecVencMae
+            // 
+            this.fecVencMae.Enabled = false;
+            this.fecVencMae.Location = new System.Drawing.Point(584, 143);
+            this.fecVencMae.Name = "fecVencMae";
+            this.fecVencMae.Size = new System.Drawing.Size(200, 20);
+            this.fecVencMae.TabIndex = 19;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackgroundImage = global::LoginForm.Properties.Resources.Buscar;
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnBuscar.Location = new System.Drawing.Point(610, 27);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(170, 34);
+            this.btnBuscar.TabIndex = 3;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // btnEliminar
             // 
             this.btnEliminar.BackgroundImage = global::LoginForm.Properties.Resources.MenuEliminar;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.btnEliminar.Location = new System.Drawing.Point(559, 27);
+            this.btnEliminar.Location = new System.Drawing.Point(409, 27);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(170, 34);
             this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.BackgroundImage = global::LoginForm.Properties.Resources.MenuModificar;
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.btnModificar.Location = new System.Drawing.Point(321, 30);
+            this.btnModificar.Location = new System.Drawing.Point(210, 27);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(170, 34);
             this.btnModificar.TabIndex = 1;
-            this.btnModificar.Paint += new System.Windows.Forms.PaintEventHandler(this.btnModificar_Paint);
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnRegistrar
             // 
             this.btnRegistrar.BackgroundImage = global::LoginForm.Properties.Resources.MenuRegistrar;
             this.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRegistrar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.btnRegistrar.Location = new System.Drawing.Point(85, 30);
+            this.btnRegistrar.Location = new System.Drawing.Point(14, 27);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(170, 34);
             this.btnRegistrar.TabIndex = 0;
@@ -362,7 +398,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(883, 445);
+            this.ClientSize = new System.Drawing.Size(883, 468);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gpbDatos);
@@ -414,5 +450,8 @@
         private System.Windows.Forms.Panel btnRegistrar;
         private System.Windows.Forms.Panel btnModificar;
         private System.Windows.Forms.Panel btnEliminar;
+        private System.Windows.Forms.Label lblVechaMae;
+        private System.Windows.Forms.DateTimePicker fecVencMae;
+        private System.Windows.Forms.Panel btnBuscar;
     }
 }
