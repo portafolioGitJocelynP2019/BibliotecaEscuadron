@@ -28,27 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.txtFechaInspeccion = new System.Windows.Forms.TextBox();
             this.txtAnoFabricacion = new System.Windows.Forms.TextBox();
             this.txtTipoModelo = new System.Windows.Forms.TextBox();
             this.txtCapacidad = new System.Windows.Forms.TextBox();
             this.txtHrAutonomia = new System.Windows.Forms.TextBox();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
-            this.txtFechaDeVencimiento = new System.Windows.Forms.TextBox();
             this.txtMatricula = new System.Windows.Forms.TextBox();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.txtCantidadHoras = new System.Windows.Forms.TextBox();
-            this.txtFechaDgac = new System.Windows.Forms.TextBox();
             this.Tipo = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -61,80 +51,30 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.txtIdSearch = new System.Windows.Forms.TextBox();
+            this.txtFechaInspeccion = new System.Windows.Forms.DateTimePicker();
+            this.txtFechaDgac = new System.Windows.Forms.DateTimePicker();
+            this.txtFechaDeVencimiento = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(23, 216);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 13);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "Editar aeronave";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(23, 172);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 13);
-            this.label4.TabIndex = 48;
-            this.label4.Text = "Eliminar aeronave";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(23, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 13);
-            this.label3.TabIndex = 47;
-            this.label3.Text = "Registrar aeronave";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(23, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 13);
-            this.label2.TabIndex = 46;
-            this.label2.Text = "Listado aeronave";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(152, 482);
-            this.pictureBox1.TabIndex = 45;
-            this.pictureBox1.TabStop = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(306, 417);
+            this.button2.Location = new System.Drawing.Point(19, 393);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 47);
             this.button2.TabIndex = 44;
             this.button2.Text = "Limpiar campos";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(497, 417);
+            this.btnIngresar.Location = new System.Drawing.Point(180, 393);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(153, 43);
             this.btnIngresar.TabIndex = 43;
@@ -142,112 +82,73 @@
             this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(708, 451);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(35, 13);
-            this.lblFecha.TabIndex = 33;
-            this.lblFecha.Text = "label2";
-            // 
-            // lblHora
-            // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Location = new System.Drawing.Point(849, 451);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(35, 13);
-            this.lblHora.TabIndex = 32;
-            this.lblHora.Text = "label1";
-            // 
-            // txtFechaInspeccion
-            // 
-            this.txtFechaInspeccion.Location = new System.Drawing.Point(316, 64);
-            this.txtFechaInspeccion.Name = "txtFechaInspeccion";
-            this.txtFechaInspeccion.Size = new System.Drawing.Size(478, 20);
-            this.txtFechaInspeccion.TabIndex = 50;
-            // 
             // txtAnoFabricacion
             // 
-            this.txtAnoFabricacion.Location = new System.Drawing.Point(316, 90);
+            this.txtAnoFabricacion.Location = new System.Drawing.Point(464, 167);
             this.txtAnoFabricacion.Name = "txtAnoFabricacion";
-            this.txtAnoFabricacion.Size = new System.Drawing.Size(478, 20);
+            this.txtAnoFabricacion.Size = new System.Drawing.Size(182, 20);
             this.txtAnoFabricacion.TabIndex = 51;
             // 
             // txtTipoModelo
             // 
-            this.txtTipoModelo.Location = new System.Drawing.Point(316, 151);
+            this.txtTipoModelo.Location = new System.Drawing.Point(464, 208);
             this.txtTipoModelo.Name = "txtTipoModelo";
-            this.txtTipoModelo.Size = new System.Drawing.Size(478, 20);
+            this.txtTipoModelo.Size = new System.Drawing.Size(182, 20);
             this.txtTipoModelo.TabIndex = 52;
             // 
             // txtCapacidad
             // 
-            this.txtCapacidad.Location = new System.Drawing.Point(316, 190);
+            this.txtCapacidad.Location = new System.Drawing.Point(142, 253);
             this.txtCapacidad.Name = "txtCapacidad";
-            this.txtCapacidad.Size = new System.Drawing.Size(478, 20);
+            this.txtCapacidad.Size = new System.Drawing.Size(191, 20);
             this.txtCapacidad.TabIndex = 53;
             // 
             // txtHrAutonomia
             // 
-            this.txtHrAutonomia.Location = new System.Drawing.Point(316, 227);
+            this.txtHrAutonomia.Location = new System.Drawing.Point(464, 253);
             this.txtHrAutonomia.Name = "txtHrAutonomia";
-            this.txtHrAutonomia.Size = new System.Drawing.Size(478, 20);
+            this.txtHrAutonomia.Size = new System.Drawing.Size(182, 20);
             this.txtHrAutonomia.TabIndex = 54;
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(316, 267);
+            this.txtMarca.Location = new System.Drawing.Point(142, 305);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(478, 20);
+            this.txtMarca.Size = new System.Drawing.Size(191, 20);
             this.txtMarca.TabIndex = 55;
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(316, 304);
+            this.txtEstado.Location = new System.Drawing.Point(464, 305);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(478, 20);
+            this.txtEstado.Size = new System.Drawing.Size(182, 20);
             this.txtEstado.TabIndex = 56;
-            // 
-            // txtFechaDeVencimiento
-            // 
-            this.txtFechaDeVencimiento.Location = new System.Drawing.Point(316, 343);
-            this.txtFechaDeVencimiento.Name = "txtFechaDeVencimiento";
-            this.txtFechaDeVencimiento.Size = new System.Drawing.Size(478, 20);
-            this.txtFechaDeVencimiento.TabIndex = 57;
             // 
             // txtMatricula
             // 
-            this.txtMatricula.Location = new System.Drawing.Point(316, 379);
+            this.txtMatricula.Location = new System.Drawing.Point(464, 357);
             this.txtMatricula.Name = "txtMatricula";
-            this.txtMatricula.Size = new System.Drawing.Size(478, 20);
+            this.txtMatricula.Size = new System.Drawing.Size(182, 20);
             this.txtMatricula.TabIndex = 58;
             // 
             // txtTipo
             // 
-            this.txtTipo.Location = new System.Drawing.Point(316, 12);
+            this.txtTipo.Location = new System.Drawing.Point(142, 128);
             this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(478, 20);
+            this.txtTipo.Size = new System.Drawing.Size(191, 20);
             this.txtTipo.TabIndex = 59;
             // 
             // txtCantidadHoras
             // 
-            this.txtCantidadHoras.Location = new System.Drawing.Point(316, 38);
+            this.txtCantidadHoras.Location = new System.Drawing.Point(464, 125);
             this.txtCantidadHoras.Name = "txtCantidadHoras";
-            this.txtCantidadHoras.Size = new System.Drawing.Size(478, 20);
+            this.txtCantidadHoras.Size = new System.Drawing.Size(182, 20);
             this.txtCantidadHoras.TabIndex = 60;
-            // 
-            // txtFechaDgac
-            // 
-            this.txtFechaDgac.Location = new System.Drawing.Point(316, 124);
-            this.txtFechaDgac.Name = "txtFechaDgac";
-            this.txtFechaDgac.Size = new System.Drawing.Size(478, 20);
-            this.txtFechaDgac.TabIndex = 61;
             // 
             // Tipo
             // 
             this.Tipo.AutoSize = true;
-            this.Tipo.Location = new System.Drawing.Point(242, 18);
+            this.Tipo.Location = new System.Drawing.Point(68, 134);
             this.Tipo.Name = "Tipo";
             this.Tipo.Size = new System.Drawing.Size(28, 13);
             this.Tipo.TabIndex = 62;
@@ -256,7 +157,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(216, 45);
+            this.label6.Location = new System.Drawing.Point(380, 128);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 13);
             this.label6.TabIndex = 63;
@@ -265,7 +166,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(203, 71);
+            this.label7.Location = new System.Drawing.Point(36, 167);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 13);
             this.label7.TabIndex = 64;
@@ -274,7 +175,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(213, 93);
+            this.label8.Location = new System.Drawing.Point(377, 167);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(81, 13);
             this.label8.TabIndex = 65;
@@ -283,7 +184,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(230, 124);
+            this.label9.Location = new System.Drawing.Point(56, 215);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 13);
             this.label9.TabIndex = 66;
@@ -292,7 +193,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(236, 158);
+            this.label10.Location = new System.Drawing.Point(380, 211);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 13);
             this.label10.TabIndex = 67;
@@ -301,7 +202,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(236, 197);
+            this.label11.Location = new System.Drawing.Point(62, 260);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(58, 13);
             this.label11.TabIndex = 68;
@@ -310,7 +211,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(242, 230);
+            this.label12.Location = new System.Drawing.Point(377, 256);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(70, 13);
             this.label12.TabIndex = 69;
@@ -319,7 +220,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(236, 274);
+            this.label13.Location = new System.Drawing.Point(75, 312);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(37, 13);
             this.label13.TabIndex = 70;
@@ -328,7 +229,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(236, 311);
+            this.label14.Location = new System.Drawing.Point(402, 312);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(40, 13);
             this.label14.TabIndex = 71;
@@ -337,7 +238,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(189, 346);
+            this.label16.Location = new System.Drawing.Point(16, 357);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(112, 13);
             this.label16.TabIndex = 72;
@@ -346,17 +247,92 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(236, 379);
+            this.label17.Location = new System.Drawing.Point(392, 357);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(50, 13);
             this.label17.TabIndex = 73;
             this.label17.Text = "Matricula";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::LoginForm.Properties.Resources.front;
+            this.pictureBox2.Location = new System.Drawing.Point(-6, -1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(792, 107);
+            this.pictureBox2.TabIndex = 74;
+            this.pictureBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(383, 393);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 43);
+            this.button1.TabIndex = 75;
+            this.button1.Text = "Editar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(569, 393);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(162, 43);
+            this.button3.TabIndex = 76;
+            this.button3.Text = "Eliminar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(683, 122);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 77;
+            this.button4.Text = "Buscar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // txtIdSearch
+            // 
+            this.txtIdSearch.Location = new System.Drawing.Point(674, 167);
+            this.txtIdSearch.Name = "txtIdSearch";
+            this.txtIdSearch.Size = new System.Drawing.Size(100, 20);
+            this.txtIdSearch.TabIndex = 78;
+            // 
+            // txtFechaInspeccion
+            // 
+            this.txtFechaInspeccion.Location = new System.Drawing.Point(142, 167);
+            this.txtFechaInspeccion.Name = "txtFechaInspeccion";
+            this.txtFechaInspeccion.Size = new System.Drawing.Size(191, 20);
+            this.txtFechaInspeccion.TabIndex = 79;
+            // 
+            // txtFechaDgac
+            // 
+            this.txtFechaDgac.Location = new System.Drawing.Point(142, 209);
+            this.txtFechaDgac.Name = "txtFechaDgac";
+            this.txtFechaDgac.Size = new System.Drawing.Size(191, 20);
+            this.txtFechaDgac.TabIndex = 80;
+            // 
+            // txtFechaDeVencimiento
+            // 
+            this.txtFechaDeVencimiento.Location = new System.Drawing.Point(142, 357);
+            this.txtFechaDeVencimiento.Name = "txtFechaDeVencimiento";
+            this.txtFechaDeVencimiento.Size = new System.Drawing.Size(191, 20);
+            this.txtFechaDeVencimiento.TabIndex = 81;
+            // 
             // AgregarAeronave
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(918, 482);
+            this.ClientSize = new System.Drawing.Size(786, 451);
+            this.Controls.Add(this.txtFechaDeVencimiento);
+            this.Controls.Add(this.txtFechaDgac);
+            this.Controls.Add(this.txtFechaInspeccion);
+            this.Controls.Add(this.txtIdSearch);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label14);
@@ -369,59 +345,38 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Tipo);
-            this.Controls.Add(this.txtFechaDgac);
             this.Controls.Add(this.txtCantidadHoras);
             this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.txtMatricula);
-            this.Controls.Add(this.txtFechaDeVencimiento);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.txtHrAutonomia);
             this.Controls.Add(this.txtCapacidad);
             this.Controls.Add(this.txtTipoModelo);
             this.Controls.Add(this.txtAnoFabricacion);
-            this.Controls.Add(this.txtFechaInspeccion);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.lblFecha);
-            this.Controls.Add(this.lblHora);
             this.Name = "AgregarAeronave";
             this.Text = "AgregarAeronave";
             this.Load += new System.EventHandler(this.AgregarAeronave_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnIngresar;
-        private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Label lblHora;
-        private System.Windows.Forms.TextBox txtFechaInspeccion;
         private System.Windows.Forms.TextBox txtAnoFabricacion;
         private System.Windows.Forms.TextBox txtTipoModelo;
         private System.Windows.Forms.TextBox txtCapacidad;
         private System.Windows.Forms.TextBox txtHrAutonomia;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.TextBox txtEstado;
-        private System.Windows.Forms.TextBox txtFechaDeVencimiento;
         private System.Windows.Forms.TextBox txtMatricula;
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.TextBox txtCantidadHoras;
-        private System.Windows.Forms.TextBox txtFechaDgac;
         private System.Windows.Forms.Label Tipo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -434,5 +389,13 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox txtIdSearch;
+        private System.Windows.Forms.DateTimePicker txtFechaInspeccion;
+        private System.Windows.Forms.DateTimePicker txtFechaDgac;
+        private System.Windows.Forms.DateTimePicker txtFechaDeVencimiento;
     }
 }

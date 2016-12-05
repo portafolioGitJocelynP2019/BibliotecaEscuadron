@@ -219,6 +219,146 @@ namespace BibliotecaEscuadron
             return true;
         }
 
+        public Boolean editarPiloto(String fecha_vencimientomae, int id_usuario, int idPiloto)
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            var request = new RestRequest("/apex/hawkflying/pilots/" + idPiloto, Method.PUT);
+
+            Piloto piloto = new Piloto();
+            piloto.fecha_vencimientomae= fecha_vencimientomae;
+            piloto.id_usuario = id_usuario;
+            request.AddHeader("Content-type", "application/json");
+
+            request.AddJsonBody(new
+            {
+                fecha = fecha_vencimientomae,
+                usuario = id_usuario
+            });
+
+            var response = client.Execute<Piloto>(request);
+            return true;
+        }
+
+        public Boolean editarAeronave(int tipo, int cantidad_horas, String fecha_inspeccion, int ano_fabricacion, String fecha_dgac, String tipo_modelo, int capacidad, int hr_autonomia, String marca, String estado, String fecha_de_vencimiento, String matricula, int id_aeronave)
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            var request = new RestRequest("/apex/hawkflying/aeronave/" + id_aeronave, Method.PUT);
+
+            Aeronave aeronave = new Aeronave();
+            aeronave.tipo = tipo;
+            aeronave.cantidad_horas = cantidad_horas;
+            aeronave.fecha_inspeccion = fecha_inspeccion;
+            aeronave.ano_fabricacion = ano_fabricacion;
+            aeronave.fecha_dgac = fecha_dgac;
+            aeronave.tipo_modelo = tipo_modelo;
+            aeronave.capacidad = capacidad;
+            aeronave.hr_autonomia = hr_autonomia;
+            aeronave.marca = marca;
+            aeronave.estado = estado;
+            aeronave.fecha_de_vencimiento = fecha_de_vencimiento;
+            aeronave.matricula = matricula;
+
+
+            request.AddHeader("Content-type", "application/json");
+
+            request.AddJsonBody(new
+            {
+                tipo = tipo,
+                cantidad_horas = cantidad_horas,
+                fecha_inspeccion = fecha_inspeccion,
+                ano_fabricacion = ano_fabricacion,
+                fecha_dgac = fecha_dgac,
+                tipo_modelo = tipo_modelo,
+                capacidad = capacidad,
+                hr_autonomia = hr_autonomia,
+                marca = marca,
+                estado = estado,
+                fecha_de_vencimiento = fecha_de_vencimiento,
+                matricula = matricula
+            });
+
+            var response = client.Execute<Aeronave>(request);
+            return true;
+        }
+
+        public ComponenteResponseListPiloto buscarPiloto(int id_piloto)
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            string service = "/apex/hawkflying/buscarPiloto/" + id_piloto;
+            var request = new RestRequest(service, Method.GET);
+
+            var response = client.Execute<ComponenteResponseListPiloto>(request);
+            return (ComponenteResponseListPiloto)response.Data;
+        }
+
+        public ComponenteResponseListPlanVuelo buscarPlan(int id_mision)
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            string service = "/apex/hawkflying/plan_vuelo/" + id_mision;
+            var request = new RestRequest(service, Method.GET);
+
+            var response = client.Execute<ComponenteResponseListPlanVuelo>(request);
+            return (ComponenteResponseListPlanVuelo)response.Data;
+        }
+
+        public ComponenteResponseListAeronave buscarAeronave(int id_aeronave)
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            string service = "/apex/hawkflying/aeronave/" + id_aeronave;
+            var request = new RestRequest(service, Method.GET);
+
+            var response = client.Execute<ComponenteResponseListAeronave>(request);
+            return (ComponenteResponseListAeronave)response.Data;
+        }
+
+        public Boolean eliminarPiloto(int id_piloto)
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            var request = new RestRequest("/apex/hawkflying/piloto/", Method.DELETE);
+
+            request.AddJsonBody(new { id_piloto = id_piloto });
+
+            var response = client.Execute<Piloto>(request);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                return true;
+            else
+                return true;
+
+        }
+
+        public Boolean eliminarPlan(int id_mision)
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            var request = new RestRequest("/apex/hawkflying/plan_vuelo/" + id_mision, Method.DELETE);
+
+            request.AddJsonBody(new { id_mision = id_mision });
+
+            var response = client.Execute<PlanVuelo>(request);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                return true;
+            else
+                return true;
+
+        }
+
+        public Boolean eliminarAeronave(int id_aeronave)
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            var request = new RestRequest("/apex/hawkflying/aeronave/" + id_aeronave, Method.DELETE);
+
+            request.AddJsonBody(new { id_aeronave = id_aeronave });
+
+            var response = client.Execute<Aeronave>(request);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                return true;
+            else
+                return true;
+
+        }
+
         public Boolean nuevoVuelo(int nro_vuelo, String condicion, int total_tv, String fecha, int id_mision, int aeronave)
         {
             var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
@@ -233,7 +373,7 @@ namespace BibliotecaEscuadron
             return true;
         }
 
-        public Boolean crearPlan(string nombre, string etd, string qrf, string tipo_vuelo, string velocidad__crucero, string reglas_vuelo)
+        public Boolean crearPlan(string nombre, string etd, string qrf, string tipo_vuelo, string velocidad__crucero, string reglas_vuelo, string salida, string destino)
         {
             var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
             var request = new RestRequest("/apex/hawkflying/plan_vuelo/", Method.POST);
@@ -243,6 +383,8 @@ namespace BibliotecaEscuadron
             request.AddParameter("tipo_vuelo", tipo_vuelo);
             request.AddParameter("velocidad__crucero", velocidad__crucero);
             request.AddParameter("reglas_vuelo", reglas_vuelo);
+            request.AddParameter("aerodromo_salida", salida);
+            request.AddParameter("aerodromo_destino", destino);
             var response = client.Execute<PlanVuelo>(request);
             return true;
         }

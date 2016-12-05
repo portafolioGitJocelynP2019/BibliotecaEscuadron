@@ -294,6 +294,7 @@
             this.idcomponente.TabIndex = 41;
             this.idcomponente.Text = "label10";
             this.idcomponente.Visible = false;
+            this.idcomponente.Click += new System.EventHandler(this.idcomponente_Click);
             // 
             // btnLimpiar
             // 

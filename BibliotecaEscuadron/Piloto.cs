@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BibliotecaEscuadron
 {
-    class Piloto
+    public class Piloto
     {
         public int id_piloto { get; set; }
         public string fecha_vencimientomae { get; set; }

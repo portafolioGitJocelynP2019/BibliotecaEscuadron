@@ -147,5 +147,10 @@ namespace LoginForm
         {
 
         }
+
+        private void idcomponente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
