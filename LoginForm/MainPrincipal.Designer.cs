@@ -31,11 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblAdmHoras = new System.Windows.Forms.Label();
             this.lblInfoNaves = new System.Windows.Forms.Label();
             this.lblPlanVuelo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -49,12 +48,11 @@
             this.lblRegComponente = new System.Windows.Forms.Label();
             this.lblRegAeronave = new System.Windows.Forms.Label();
             this.lblRegPiloto = new System.Windows.Forms.Label();
-            this.lklSalir = new System.Windows.Forms.LinkLabel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lklSalir = new System.Windows.Forms.LinkLabel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -63,10 +61,10 @@
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -114,12 +112,21 @@
             this.panel1.Size = new System.Drawing.Size(192, 484);
             this.panel1.TabIndex = 6;
             // 
+            // panel6
+            // 
+            this.panel6.BackgroundImage = global::LoginForm.Properties.Resources.MenuAdm;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel6.Location = new System.Drawing.Point(-3, 411);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(192, 36);
+            this.panel6.TabIndex = 8;
+            // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.lblAdmin);
             this.panel5.Location = new System.Drawing.Point(-3, 443);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(192, 39);
             this.panel5.TabIndex = 7;
@@ -140,8 +147,6 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.lblAdmHoras);
             this.panel4.Controls.Add(this.lblInfoNaves);
             this.panel4.Controls.Add(this.lblPlanVuelo);
             this.panel4.Location = new System.Drawing.Point(0, 320);
@@ -149,35 +154,12 @@
             this.panel4.Size = new System.Drawing.Size(190, 100);
             this.panel4.TabIndex = 5;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(3, 51);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Registrar vuelo";
-            // 
-            // lblAdmHoras
-            // 
-            this.lblAdmHoras.AutoSize = true;
-            this.lblAdmHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdmHoras.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAdmHoras.Location = new System.Drawing.Point(2, 72);
-            this.lblAdmHoras.Name = "lblAdmHoras";
-            this.lblAdmHoras.Size = new System.Drawing.Size(153, 15);
-            this.lblAdmHoras.TabIndex = 2;
-            this.lblAdmHoras.Text = "Control Horas de vuelo";
-            // 
             // lblInfoNaves
             // 
             this.lblInfoNaves.AutoSize = true;
             this.lblInfoNaves.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoNaves.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblInfoNaves.Location = new System.Drawing.Point(3, 29);
+            this.lblInfoNaves.Location = new System.Drawing.Point(3, 31);
             this.lblInfoNaves.Name = "lblInfoNaves";
             this.lblInfoNaves.Size = new System.Drawing.Size(146, 15);
             this.lblInfoNaves.TabIndex = 1;
@@ -325,36 +307,6 @@
             this.lblRegPiloto.Text = "Aministracion piloto";
             this.lblRegPiloto.Click += new System.EventHandler(this.lblRegPiloto_Click);
             // 
-            // lklSalir
-            // 
-            this.lklSalir.AutoSize = true;
-            this.lklSalir.Location = new System.Drawing.Point(12, 157);
-            this.lklSalir.Name = "lklSalir";
-            this.lklSalir.Size = new System.Drawing.Size(27, 13);
-            this.lklSalir.TabIndex = 8;
-            this.lklSalir.TabStop = true;
-            this.lklSalir.Text = "Salir";
-            this.lklSalir.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklSalir_LinkClicked);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::LoginForm.Properties.Resources.foto1;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(220, 193);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(899, 484);
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackgroundImage = global::LoginForm.Properties.Resources.MenuAdm;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel6.Location = new System.Drawing.Point(-3, 411);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(192, 36);
-            this.panel6.TabIndex = 8;
-            // 
             // pictureBox6
             // 
             this.pictureBox6.BackgroundImage = global::LoginForm.Properties.Resources.MenuPilotoo;
@@ -385,6 +337,27 @@
             this.pictureBox4.Size = new System.Drawing.Size(191, 40);
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
+            // 
+            // lklSalir
+            // 
+            this.lklSalir.AutoSize = true;
+            this.lklSalir.Location = new System.Drawing.Point(12, 157);
+            this.lklSalir.Name = "lklSalir";
+            this.lklSalir.Size = new System.Drawing.Size(27, 13);
+            this.lklSalir.TabIndex = 8;
+            this.lklSalir.TabStop = true;
+            this.lklSalir.Text = "Salir";
+            this.lklSalir.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklSalir_LinkClicked);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::LoginForm.Properties.Resources.foto1;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(220, 193);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(899, 484);
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -443,10 +416,10 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -479,12 +452,10 @@
         private System.Windows.Forms.Label lblRegHistorico;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label lblAdmHoras;
         private System.Windows.Forms.Label lblInfoNaves;
         private System.Windows.Forms.Label lblPlanVuelo;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lblAdmin;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel6;
     }
 }
