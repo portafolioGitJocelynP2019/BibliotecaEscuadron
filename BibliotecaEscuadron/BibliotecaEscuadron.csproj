@@ -59,6 +59,7 @@
     <Compile Include="ComponenteResponseList.cs" />
     <Compile Include="ComponenteResponseListAeronave.cs" />
     <Compile Include="ComponenteResponseListPiloto.cs" />
+    <Compile Include="ComponenteResponseListPlanVuelo.cs" />
     <Compile Include="ConsumeWebApi.cs" />
     <Compile Include="Correo.cs" />
     <Compile Include="IJsonSerializer.cs" />
