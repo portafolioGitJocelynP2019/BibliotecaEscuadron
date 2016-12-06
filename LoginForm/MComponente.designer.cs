@@ -48,12 +48,12 @@
             this.txtNombreComp = new System.Windows.Forms.TextBox();
             this.txtIdTipoComp = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtEspecialista = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtEstructura = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.idcomponente = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.cmbMecanico = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +66,7 @@
             this.btnEliminarComponente.Location = new System.Drawing.Point(331, 524);
             this.btnEliminarComponente.Name = "btnEliminarComponente";
             this.btnEliminarComponente.Size = new System.Drawing.Size(86, 42);
-            this.btnEliminarComponente.TabIndex = 10;
+            this.btnEliminarComponente.TabIndex = 11;
             this.btnEliminarComponente.Text = "Eliminar";
             this.btnEliminarComponente.UseVisualStyleBackColor = false;
             this.btnEliminarComponente.Click += new System.EventHandler(this.btnEliminarComponente_Click);
@@ -79,7 +79,7 @@
             this.btnEditarComponente.Location = new System.Drawing.Point(180, 524);
             this.btnEditarComponente.Name = "btnEditarComponente";
             this.btnEditarComponente.Size = new System.Drawing.Size(86, 42);
-            this.btnEditarComponente.TabIndex = 9;
+            this.btnEditarComponente.TabIndex = 10;
             this.btnEditarComponente.Text = "Editar";
             this.btnEditarComponente.UseVisualStyleBackColor = false;
             this.btnEditarComponente.Click += new System.EventHandler(this.btnEditarComponente_Click);
@@ -92,7 +92,7 @@
             this.btnRegistrarComponente.Location = new System.Drawing.Point(19, 524);
             this.btnRegistrarComponente.Name = "btnRegistrarComponente";
             this.btnRegistrarComponente.Size = new System.Drawing.Size(86, 42);
-            this.btnRegistrarComponente.TabIndex = 8;
+            this.btnRegistrarComponente.TabIndex = 9;
             this.btnRegistrarComponente.Text = "Registrar";
             this.btnRegistrarComponente.UseVisualStyleBackColor = false;
             this.btnRegistrarComponente.Click += new System.EventHandler(this.btnRegistrarComponente_Click);
@@ -124,7 +124,7 @@
             this.btnBuscarComponente.Location = new System.Drawing.Point(436, 214);
             this.btnBuscarComponente.Name = "btnBuscarComponente";
             this.btnBuscarComponente.Size = new System.Drawing.Size(88, 28);
-            this.btnBuscarComponente.TabIndex = 17;
+            this.btnBuscarComponente.TabIndex = 1;
             this.btnBuscarComponente.Text = "Buscar";
             this.btnBuscarComponente.UseVisualStyleBackColor = false;
             this.btnBuscarComponente.Click += new System.EventHandler(this.btnBuscarComponente_Click);
@@ -134,28 +134,28 @@
             this.txtCantDiasFab.Location = new System.Drawing.Point(231, 360);
             this.txtCantDiasFab.Name = "txtCantDiasFab";
             this.txtCantDiasFab.Size = new System.Drawing.Size(200, 20);
-            this.txtCantDiasFab.TabIndex = 32;
+            this.txtCantDiasFab.TabIndex = 5;
             // 
             // txtIdCantHrsFab
             // 
             this.txtIdCantHrsFab.Location = new System.Drawing.Point(231, 324);
             this.txtIdCantHrsFab.Name = "txtIdCantHrsFab";
             this.txtIdCantHrsFab.Size = new System.Drawing.Size(200, 20);
-            this.txtIdCantHrsFab.TabIndex = 31;
+            this.txtIdCantHrsFab.TabIndex = 4;
             // 
             // txtIdPadre
             // 
             this.txtIdPadre.Location = new System.Drawing.Point(230, 286);
             this.txtIdPadre.Name = "txtIdPadre";
             this.txtIdPadre.Size = new System.Drawing.Size(200, 20);
-            this.txtIdPadre.TabIndex = 30;
+            this.txtIdPadre.TabIndex = 3;
             // 
             // txtCantHorasComp
             // 
             this.txtCantHorasComp.Location = new System.Drawing.Point(230, 253);
             this.txtCantHorasComp.Name = "txtCantHorasComp";
             this.txtCantHorasComp.Size = new System.Drawing.Size(200, 20);
-            this.txtCantHorasComp.TabIndex = 29;
+            this.txtCantHorasComp.TabIndex = 2;
             // 
             // label7
             // 
@@ -176,7 +176,7 @@
             this.label6.Location = new System.Drawing.Point(18, 323);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(195, 19);
-            this.label6.TabIndex = 26;
+            this.label6.TabIndex = 0;
             this.label6.Text = "Cantidad de horas Fabricante";
             // 
             // label4
@@ -186,9 +186,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label4.Location = new System.Drawing.Point(18, 285);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 19);
+            this.label4.Size = new System.Drawing.Size(112, 19);
             this.label4.TabIndex = 24;
-            this.label4.Text = "ID Padre";
+            this.label4.Text = "SubComponente";
             // 
             // label3
             // 
@@ -221,7 +221,7 @@
             this.label1.Location = new System.Drawing.Point(50, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(354, 39);
-            this.label1.TabIndex = 21;
+            this.label1.TabIndex = 17;
             this.label1.Text = "Administrar Componente";
             // 
             // txtNombreComp
@@ -229,14 +229,14 @@
             this.txtNombreComp.Location = new System.Drawing.Point(230, 220);
             this.txtNombreComp.Name = "txtNombreComp";
             this.txtNombreComp.Size = new System.Drawing.Size(200, 20);
-            this.txtNombreComp.TabIndex = 34;
+            this.txtNombreComp.TabIndex = 0;
             // 
             // txtIdTipoComp
             // 
             this.txtIdTipoComp.Location = new System.Drawing.Point(232, 398);
             this.txtIdTipoComp.Name = "txtIdTipoComp";
             this.txtIdTipoComp.Size = new System.Drawing.Size(200, 20);
-            this.txtIdTipoComp.TabIndex = 36;
+            this.txtIdTipoComp.TabIndex = 6;
             // 
             // label5
             // 
@@ -249,13 +249,6 @@
             this.label5.TabIndex = 35;
             this.label5.Text = "ID Tipo Componente";
             // 
-            // txtEspecialista
-            // 
-            this.txtEspecialista.Location = new System.Drawing.Point(231, 438);
-            this.txtEspecialista.Name = "txtEspecialista";
-            this.txtEspecialista.Size = new System.Drawing.Size(200, 20);
-            this.txtEspecialista.TabIndex = 38;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -263,16 +256,16 @@
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label8.Location = new System.Drawing.Point(18, 438);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 19);
+            this.label8.Size = new System.Drawing.Size(68, 19);
             this.label8.TabIndex = 37;
-            this.label8.Text = "Especialista";
+            this.label8.Text = "Mecánico";
             // 
             // txtEstructura
             // 
             this.txtEstructura.Location = new System.Drawing.Point(232, 476);
             this.txtEstructura.Name = "txtEstructura";
             this.txtEstructura.Size = new System.Drawing.Size(200, 20);
-            this.txtEstructura.TabIndex = 40;
+            this.txtEstructura.TabIndex = 8;
             // 
             // label9
             // 
@@ -294,7 +287,6 @@
             this.idcomponente.TabIndex = 41;
             this.idcomponente.Text = "label10";
             this.idcomponente.Visible = false;
-            this.idcomponente.Click += new System.EventHandler(this.idcomponente_Click);
             // 
             // btnLimpiar
             // 
@@ -304,10 +296,18 @@
             this.btnLimpiar.Location = new System.Drawing.Point(455, 510);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(86, 56);
-            this.btnLimpiar.TabIndex = 42;
+            this.btnLimpiar.TabIndex = 12;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // cmbMecanico
+            // 
+            this.cmbMecanico.FormattingEnabled = true;
+            this.cmbMecanico.Location = new System.Drawing.Point(232, 439);
+            this.cmbMecanico.Name = "cmbMecanico";
+            this.cmbMecanico.Size = new System.Drawing.Size(198, 21);
+            this.cmbMecanico.TabIndex = 7;
             // 
             // MComponente
             // 
@@ -315,11 +315,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(553, 576);
+            this.Controls.Add(this.cmbMecanico);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.idcomponente);
             this.Controls.Add(this.txtEstructura);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtEspecialista);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtIdTipoComp);
             this.Controls.Add(this.label5);
@@ -373,11 +373,11 @@
         private System.Windows.Forms.TextBox txtNombreComp;
         private System.Windows.Forms.TextBox txtIdTipoComp;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtEspecialista;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtEstructura;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label idcomponente;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.ComboBox cmbMecanico;
     }
 }

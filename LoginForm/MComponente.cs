@@ -55,28 +55,28 @@ namespace LoginForm
                 MessageBox.Show("Asegurese de ingresar el tipo de componente", "Close Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtIdTipoComp.Focus();
             }
-            else if (txtEspecialista.Text.Trim() == "")
-            {
-                MessageBox.Show("Asegurese de ingresar el Especialista", "Close Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtEspecialista.Focus();
-            }
+            //else if (txtEspecialista.Text.Trim() == "")
+            //{
+            //    MessageBox.Show("Asegurese de ingresar el Especialista", "Close Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    txtEspecialista.Focus();
+            //}
             else if (txtEstructura.Text.Trim() == "")
             {
                 MessageBox.Show("Asegurese de ingresar la estructura", "Close Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtEstructura.Focus();
             }
             else
-            {
+            {   
                 ConsumeWebApi consume = new ConsumeWebApi();
                 Boolean nuevoComponente = consume.nuevoComponente((txtNombreComp.Text), Int32.Parse(txtCantHorasComp.Text), Int32.Parse(txtIdPadre.Text), Int32.Parse(txtIdCantHrsFab.Text), Int32.Parse(txtCantDiasFab.Text),
-                    Int32.Parse(txtIdTipoComp.Text), Int32.Parse(txtEspecialista.Text), Int32.Parse(txtEstructura.Text));
+                    Int32.Parse(txtIdTipoComp.Text), Int32.Parse(cmbMecanico.SelectedValue.ToString()), Int32.Parse(txtEstructura.Text));
                 if (nuevoComponente)
                 {
                     MessageBox.Show("Nuevo Componente ingresado.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Ha ocurrido un error.", "Close Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ha ocurrido un error.", "Problemas en el ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -86,37 +86,50 @@ namespace LoginForm
             ConsumeWebApi consume = new ConsumeWebApi();
             ComponenteResponseList coincidencias = consume.buscarComponente(txtNombreComp.Text.Trim());
 
-            if (coincidencias.items.Count == 1)
+            if (!txtNombreComp.Text.Equals(String.Empty)) {
+                if (coincidencias.items.Count == 1)
+                {
+                    Componente encontrado = coincidencias.items[0];
+                    idcomponente.Text = encontrado.id_componente.ToString();
+                    txtCantDiasFab.Text = encontrado.cantidad_dias_fabricante.ToString();
+                    txtCantHorasComp.Text = encontrado.cant_horas.ToString();
+                    cmbMecanico.SelectedValue = encontrado.especialista_id_mec_compo;
+
+                    txtEstructura.Text = encontrado.estructura_id.ToString();
+                    txtIdCantHrsFab.Text = encontrado.cantidad_horas_fabricante.ToString();
+                    txtIdPadre.Text = encontrado.id_padre_componente.ToString();
+                    txtIdTipoComp.Text = encontrado.id_tipo_componente.ToString();
+                }
+                else if (coincidencias.items.Count == 0)
+                {
+                    MessageBox.Show("No hay componentes registrados con ese nombre", "Componente no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
             {
-                Componente encontrado = coincidencias.items[0];
-                idcomponente.Text = encontrado.id_componente.ToString();
-                txtCantDiasFab.Text = encontrado.cantidad_dias_fabricante.ToString();
-                txtCantHorasComp.Text = encontrado.cant_horas.ToString();
-                txtEspecialista.Text = encontrado.especialista_id_mec_compo.ToString();
-                txtEstructura.Text = encontrado.estructura_id.ToString();
-                txtIdCantHrsFab.Text = encontrado.cantidad_horas_fabricante.ToString();
-                txtIdPadre.Text = encontrado.id_padre_componente.ToString();
-                txtIdTipoComp.Text = encontrado.id_tipo_componente.ToString();
-            } else if (coincidencias.items.Count == 0) {
-                MessageBox.Show("No hay componentes registrados con ese nombre", "Componente no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ingrese el nombre del componente que desea buscar", "Ingrese datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void btnEditarComponente_Click(object sender, EventArgs e)
         {
             ConsumeWebApi consume = new ConsumeWebApi();
-            bool resultado = consume.editarComponente((txtNombreComp.Text), Int32.Parse(txtCantHorasComp.Text), Int32.Parse(txtIdPadre.Text), Int32.Parse(txtIdCantHrsFab.Text), Int32.Parse(txtCantDiasFab.Text),
-                    Int32.Parse(txtIdTipoComp.Text), Int32.Parse(txtEspecialista.Text), Int32.Parse(txtEstructura.Text), Convert.ToInt32(idcomponente.Text));
-            if (resultado)
+            if (idcomponente.Text != String.Empty && !idcomponente.Text.Equals("label10"))
             {
-                MessageBox.Show("Nuevo Componente ingresado.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Ha ocurrido un error.", "Close Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                int id = Convert.ToInt32(idcomponente.Text);
+                //bool result = consume.eliminarComponente(id);
+                bool resultado = consume.editarComponente((txtNombreComp.Text), Int32.Parse(txtCantHorasComp.Text), Int32.Parse(txtIdPadre.Text), Int32.Parse(txtIdCantHrsFab.Text), Int32.Parse(txtCantDiasFab.Text),
+                    Int32.Parse(txtIdTipoComp.Text), Int32.Parse(cmbMecanico.SelectedValue.ToString()), Int32.Parse(txtEstructura.Text), Convert.ToInt32(idcomponente.Text));
+                if (resultado)
+                {
+                    MessageBox.Show("Componente editado.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un error.", "Close Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             foreach (var txt in Controls)
@@ -125,31 +138,40 @@ namespace LoginForm
                 {
                     ((TextBox)txt).Clear();
                 }
-                
+                else if (txt is ComboBox)
+                {
+                    ((ComboBox)txt).Text = string.Empty;
+                }
             }
         }
 
         private void btnEliminarComponente_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(idcomponente.Text);
+        {   
             ConsumeWebApi consume = new ConsumeWebApi();
-            bool result = consume.eliminarComponente(id);
-
-            if (result){
-                MessageBox.Show("Componente eliminado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }else{
-                MessageBox.Show("Algo salió mal. Intente nuevamente.", "Problemas", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            }
             
+            if (idcomponente.Text != String.Empty && !idcomponente.Text.Equals("label10") )
+            {
+                int id = Convert.ToInt32(idcomponente.Text);
+                bool result = consume.eliminarComponente(id);
+
+                if (result)
+                {
+                    MessageBox.Show("Componente eliminado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Algo salió mal. Intente nuevamente.", "Problemas", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                }
+            }
+
         }
 
         private void MComponente_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void idcomponente_Click(object sender, EventArgs e)
-        {
+            ConsumeWebApi consume = new ConsumeWebApi();
+            cmbMecanico.DataSource = consume.getEspecialistas();
+            cmbMecanico.DisplayMember = "NOMBRE";
+            cmbMecanico.ValueMember = "ID_MECANICO";
 
         }
     }

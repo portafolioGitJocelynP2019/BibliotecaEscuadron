@@ -62,8 +62,10 @@
     <Compile Include="ComponenteResponseListPlanVuelo.cs" />
     <Compile Include="ConsumeWebApi.cs" />
     <Compile Include="Correo.cs" />
+    <Compile Include="Especialista.cs" />
     <Compile Include="IJsonSerializer.cs" />
     <Compile Include="Mantenimiento.cs" />
+    <Compile Include="Mecanico.cs" />
     <Compile Include="NewtonsoftJsonSerializer.cs" />
     <Compile Include="Piloto.cs" />
     <Compile Include="PlanMantenimiento.cs" />

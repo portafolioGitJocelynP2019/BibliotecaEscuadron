@@ -389,7 +389,7 @@ namespace BibliotecaEscuadron
             return true;
         }
 
-        
+
 
         public Boolean nuevoComponente(string nombre_componente, int cantidad_horasC, int id_padreComp, int cantidad_horasFab, int cantidad_diasFab, int id_tipoComponente, int id_especialista, int id_estructura)
         {
@@ -448,7 +448,6 @@ namespace BibliotecaEscuadron
             var response = client.Execute<Componente>(request);
             return true;
         }
-
         /// <summary>
         /// Identificador del componente a eliminar
         /// </summary>
@@ -467,6 +466,8 @@ namespace BibliotecaEscuadron
             else
                 return false;
 
+
+
         }
 
         public ComponenteResponseList buscarComponente(string nombre_componente)
@@ -477,6 +478,29 @@ namespace BibliotecaEscuadron
 
             var response = client.Execute<ComponenteResponseList>(request);
             return (ComponenteResponseList)response.Data;
+        }
+
+
+        public List<Mecanico> getMecanicos()
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            string service = "apex/hawkflying/mecanico";
+            var request = new RestRequest(service, Method.GET);
+            request.RootElement = "items";
+
+            var response = client.Execute<List<Mecanico>>(request);
+            return response.Data;
+        }
+
+        public List<Mecanico> getEspecialistas()
+        {
+            var client = new RestClient("https://database-clportafoliootrial.db.us2.oraclecloudapps.com");
+            string service = "apex/hawkflying/mecanicosEspecialistas";
+            var request = new RestRequest(service, Method.GET);
+            request.RootElement = "items";
+
+            var response = client.Execute<List<Mecanico>>(request);
+            return response.Data;
         }
 
     }
