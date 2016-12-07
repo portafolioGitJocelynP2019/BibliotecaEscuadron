@@ -22,7 +22,7 @@ namespace LoginForm
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             ConsumeWebApi consume = new ConsumeWebApi();
-            Boolean registrarAeronave = consume.nuevoAeronave(Int32.Parse(txtTipo.Text), Int32.Parse(txtCantidadHoras.Text), txtFechaInspeccion.Value.ToString("dd-MMMM-yyyy", CultureInfo.CreateSpecificCulture("en-US")), Int32.Parse(txtAnoFabricacion.Text), txtFechaDgac.Value.ToString("dd-MMMM-yyyy", CultureInfo.CreateSpecificCulture("en-US")), txtTipoModelo.Text, Int32.Parse(txtCapacidad.Text),Int32.Parse(txtHrAutonomia.Text),txtMarca.Text, txtEstado.Text, txtFechaDeVencimiento.Value.ToString("dd-MMMM-yyyy", CultureInfo.CreateSpecificCulture("en-US")), txtMatricula.Text);
+            Boolean registrarAeronave = consume.nuevoAeronave(Int32.Parse(txtTipo.Text), Int32.Parse(txtCantidadHoras.Text), txtFechaInspeccion.Value.ToString("dd-MMMM-yyyy", CultureInfo.CreateSpecificCulture("en-US")), Int32.Parse(txtAnoFabricacion.Text), txtFechaDgac.Value.ToString("dd-MMMM-yyyy", CultureInfo.CreateSpecificCulture("en-US")), txtTipoModelo.Text, Int32.Parse(txtCapacidad.Text),Int32.Parse(txtHrAutonomia.Text),txtMarca.SelectedItem.ToString(), txtEstado.SelectedItem.ToString(), txtFechaDeVencimiento.Value.ToString("dd-MMMM-yyyy", CultureInfo.CreateSpecificCulture("en-US")), txtMatricula.Text);
             if (registrarAeronave)
             {
                 MessageBox.Show("Nueva aeronave creada.", "Close Error", MessageBoxButtons.OK);

@@ -34,8 +34,6 @@
             this.txtTipoModelo = new System.Windows.Forms.TextBox();
             this.txtCapacidad = new System.Windows.Forms.TextBox();
             this.txtHrAutonomia = new System.Windows.Forms.TextBox();
-            this.txtMarca = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.txtMatricula = new System.Windows.Forms.TextBox();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.txtCantidadHoras = new System.Windows.Forms.TextBox();
@@ -59,6 +57,8 @@
             this.txtFechaInspeccion = new System.Windows.Forms.DateTimePicker();
             this.txtFechaDgac = new System.Windows.Forms.DateTimePicker();
             this.txtFechaDeVencimiento = new System.Windows.Forms.DateTimePicker();
+            this.txtMarca = new System.Windows.Forms.ComboBox();
+            this.txtEstado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,20 +109,6 @@
             this.txtHrAutonomia.Name = "txtHrAutonomia";
             this.txtHrAutonomia.Size = new System.Drawing.Size(182, 20);
             this.txtHrAutonomia.TabIndex = 54;
-            // 
-            // txtMarca
-            // 
-            this.txtMarca.Location = new System.Drawing.Point(142, 305);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(191, 20);
-            this.txtMarca.TabIndex = 55;
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(464, 305);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(182, 20);
-            this.txtEstado.TabIndex = 56;
             // 
             // txtMatricula
             // 
@@ -320,11 +306,37 @@
             this.txtFechaDeVencimiento.Size = new System.Drawing.Size(191, 20);
             this.txtFechaDeVencimiento.TabIndex = 81;
             // 
+            // txtMarca
+            // 
+            this.txtMarca.FormattingEnabled = true;
+            this.txtMarca.Items.AddRange(new object[] {
+            "BOEING",
+            "AIRBUS",
+            "EMBRAER",
+            "BOMBARDIER"});
+            this.txtMarca.Location = new System.Drawing.Point(142, 309);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(191, 21);
+            this.txtMarca.TabIndex = 82;
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.FormattingEnabled = true;
+            this.txtEstado.Items.AddRange(new object[] {
+            "Vigente",
+            "Fuera de vuelo"});
+            this.txtEstado.Location = new System.Drawing.Point(464, 304);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(182, 21);
+            this.txtEstado.TabIndex = 83;
+            // 
             // AgregarAeronave
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 451);
+            this.Controls.Add(this.txtEstado);
+            this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.txtFechaDeVencimiento);
             this.Controls.Add(this.txtFechaDgac);
             this.Controls.Add(this.txtFechaInspeccion);
@@ -348,8 +360,6 @@
             this.Controls.Add(this.txtCantidadHoras);
             this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.txtMatricula);
-            this.Controls.Add(this.txtEstado);
-            this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.txtHrAutonomia);
             this.Controls.Add(this.txtCapacidad);
             this.Controls.Add(this.txtTipoModelo);
@@ -372,8 +382,6 @@
         private System.Windows.Forms.TextBox txtTipoModelo;
         private System.Windows.Forms.TextBox txtCapacidad;
         private System.Windows.Forms.TextBox txtHrAutonomia;
-        private System.Windows.Forms.TextBox txtMarca;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.TextBox txtMatricula;
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.TextBox txtCantidadHoras;
@@ -397,5 +405,7 @@
         private System.Windows.Forms.DateTimePicker txtFechaInspeccion;
         private System.Windows.Forms.DateTimePicker txtFechaDgac;
         private System.Windows.Forms.DateTimePicker txtFechaDeVencimiento;
+        private System.Windows.Forms.ComboBox txtMarca;
+        private System.Windows.Forms.ComboBox txtEstado;
     }
 }
